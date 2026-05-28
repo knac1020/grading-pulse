@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カード一覧 | Grading Pulse</title>
+    <meta name="description" content="eBayで販売中のPSA鑑定ポケモンカードをまとめて見やすく表示。オークション・定価販売をリアルタイムで検索できます。">
+<meta name="keywords" content="ポケモンカード,PSA,eBay,鑑定,ポケカ,相場,PSA10,オークション,Grading Pulse,ぐれぱる">
+<meta property="og:title" content="カード一覧 | Grading Pulse">
+<meta property="og:description" content="eBayで販売中のPSA鑑定ポケモンカードをまとめて見やすく表示。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="カード一覧 | Grading Pulse">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: #f8f8f8; color: #1c1c1e; }
+        header { background: #fff; border-bottom: 1px solid #e0e0e0; position: sticky; top: 0; z-index: 100; }
+        .header-inner { max-width: 1200px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 10px; }
+        .logo { font-size: 1.2em; font-weight: bold; color: #e94560; text-decoration: none; white-space: nowrap; }
+        .lang-tabs { display: flex; gap: 4px; }
+       .lang-tab { padding: 8px 16px; border: none; background: none; color: #666; cursor: pointer; font-size: 0.85em; white-space: nowrap; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.lang-tab.active { color: #e94560; border-bottom-color: #e94560; font-weight: bold; }
+        
+        .header-search { display: flex; align-items: center; border: 1px solid #ddd; border-radius: 25px; overflow: hidden; background: #f5f5f5; flex: 1; max-width: 300px; }
+        .header-search input { border: none; background: transparent; padding: 7px 12px; font-size: 0.85em; outline: none; width: 100%; }
+        .header-search button { border: none; background: #e94560; color: #fff; padding: 7px 12px; cursor: pointer; }
+        main { max-width: 1200px; margin: 0 auto; padding: 20px 16px; }
+        .breadcrumb { font-size: 0.85em; color: #888; margin-bottom: 15px; }
+        .breadcrumb a { color: #e94560; text-decoration: none; }
+        .page-title { font-size: 1.4em; font-weight: bold; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid #e94560; }
+        .buying-filters { display: flex; gap: 0; margin-bottom: 15px; border-bottom: 1px solid #e0e0e0; }
+        .buying-tab { padding: 10px 16px; border: none; background: none; color: #888; cursor: pointer; font-size: 0.9em; border-bottom: 2px solid transparent; margin-bottom: -1px; white-space: nowrap; flex: 1; text-align: center; }
+        .buying-tab.active { color: #e94560; border-bottom-color: #e94560; font-weight: bold; }
+        .grade-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px; }
+        .grade-btn { padding: 6px 14px; border: 1px solid #ddd; border-radius: 20px; background: #fff; color: #666; cursor: pointer; font-size: 0.85em; }
+        .grade-btn.active { background: #e94560; color: #fff; border-color: #e94560; }
+        .list-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+        .count { color: #888; font-size: 0.85em; }
+        .sort-select { border: 1px solid #ddd; border-radius: 5px; padding: 5px 10px; font-size: 0.85em; color: #444; background: #fff; cursor: pointer; }
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 15px; }
+        .card { background: #fff; border-radius: 8px; overflow: hidden; cursor: pointer; transition: box-shadow 0.2s; border: 1px solid #eee; }
+        .card:hover { box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .card img { width: 100%; height: 160px; object-fit: contain; background: #f9f9f9; padding: 8px; }
+        .card-info { padding: 10px; }
+        .card-title { font-size: 0.75em; color: #444; margin-bottom: 6px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.4; }
+        .card-price { color: #e94560; font-size: 1em; font-weight: bold; }
+        .card-jpy { font-size: 0.75em; color: #999; margin-top: 1px; }
+        .card-badge { display: inline-block; font-size: 0.7em; padding: 2px 6px; border-radius: 4px; margin-top: 4px; }
+        .badge-auction { background: #fff3e0; color: #e65100; }
+        .badge-fixed { background: #e8f5e9; color: #2e7d32; }
+        .empty { text-align: center; padding: 60px 20px; color: #888; }
+        .logo-wrap { display: flex; flex-direction: column; flex: 1; }
+.logo { font-size: 1.1em; font-weight: bold; color: #e94560; text-decoration: none; white-space: nowrap; line-height: 1.2; }
+.logo-sub { font-size: 0.65em; color: #999; white-space: nowrap; margin-left: 20px; }
+.header-center { display: none; }
+.header-search-btn { background: none; border: none; cursor: pointer; font-size: 1.3em; color: #444; padding: 4px 8px; }
+.lang-bar { background: #f8f8f8; border-bottom: 1px solid #e0e0e0; padding: 8px 16px 6px; display: flex; gap: 6px; align-items: center; }
+.lang-tab { padding: 8px 16px; border: none; background: none; color: #666; cursor: pointer; font-size: 0.85em; white-space: nowrap; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.lang-tab.active { color: #e94560; border-bottom-color: #e94560; font-weight: bold; }
+@media (min-width: 768px) {
+    .header-center { display: block; flex: 1; }
+    .lang-bar { display: none; }
+}
+.filter-section { margin-bottom: 10px; }
+.filter-label { font-size: 0.75em; color: #999; font-weight: bold; display: block; margin-bottom: 4px; padding-left: 4px; }
+    .header-search { display: flex; align-items: center; border: 1px solid #ddd; border-radius: 25px; overflow: hidden; background: #f5f5f5; max-width: 220px; }
+.header-search input { border: none; background: transparent; padding: 7px 12px; font-size: 0.85em; outline: none; width: 100%; }
+.header-search button { border: none; background: none; color: #888; padding: 7px 10px; cursor: pointer; }
+@media (max-width: 768px) { .header-search { max-width: 140px; } }
+            @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-inner">
+        <a class="logo-wrap" href="index.html" style="text-decoration:none;">
+            <img src="logo.png" alt="Grading Pulse" style="height:40px;width:auto;max-width:180px;object-fit:contain;">
+<span class="logo-sub">eBay PSAポケカ出品まとめ</span>
+        </a>
+        <div class="header-center">
+            <div class="lang-tabs">
+                <button class="lang-tab" id="lang-all" onclick="switchLang('all', this)">ALL</button>
+                <button class="lang-tab" id="lang-jp" onclick="switchLang('japanese', this)">日本語カード</button>
+                <button class="lang-tab" id="lang-en" onclick="switchLang('english', this)">他言語カード</button>
+            </div>
+        </div>
+        <div class="header-search">
+    <input type="text" id="header-search-input" placeholder="何をお探しですか？" onkeypress="if(event.key==='Enter'){location.href='list.html?q='+encodeURIComponent(this.value);}">
+    <button onclick="location.href='list.html?q='+encodeURIComponent(document.getElementById('header-search-input').value)">🔍</button>
+</div>
+    </div>
+</header>
+<div class="lang-bar">
+    <span class="filter-label">Card lang</span>
+    <button class="lang-tab" id="lang-bar-all" onclick="switchLang('all', this)">ALL</button>
+    <button class="lang-tab" id="lang-bar-jp" onclick="switchLang('japanese', this)">日本語カード</button>
+    <button class="lang-tab" id="lang-bar-en" onclick="switchLang('english', this)">他言語カード</button>
+</div>
+<main>
+    <div class="breadcrumb"><a href="index.html">TOP</a> &gt; <span id="breadcrumb-current"></span></div>
+    <div class="page-title" id="page-title"></div>
+
+    <div class="filter-section">
+    <span class="filter-label">販売形式</span>
+    <div class="buying-filters">
+        <button class="buying-tab active" onclick="switchBuying('all', this)">ALL</button>
+        <button class="buying-tab" onclick="switchBuying('AUCTION', this)">オークション</button>
+        <button class="buying-tab" onclick="switchBuying('FIXED_PRICE', this)">定価販売</button>
+    </div>
+</div>
+
+    <div class="filter-section">
+    <span class="filter-label">グレード</span>
+    <div class="grade-filters">
+        <button class="grade-btn active" onclick="switchGrade('all', this)">ALL</button>
+        <button class="grade-btn" onclick="switchGrade('PSA10', this)">PSA10</button>
+        <button class="grade-btn" onclick="switchGrade('PSA9', this)">PSA9</button>
+        <button class="grade-btn" onclick="switchGrade('PSA8以下', this)">PSA8以下</button>
+        
+        <button class="grade-btn" onclick="switchGrade('その他グレード', this)">その他</button>
+    </div>
+    </div>
+    <div class="list-header">
+        <div class="count" id="count"></div>
+        <select class="sort-select" onchange="sortCards(this.value)">
+            <option value="default">並び替え</option>
+            <option value="price-asc">価格が安い順</option>
+            <option value="price-desc">価格が高い順</option>
+            <option value="new">新着順</option>
+        </select>
+    </div>
+    <div class="card-grid" id="card-grid"></div>
+    <div id="spinner" style="display:none;justify-content:center;align-items:center;padding:30px;"><div style="width:32px;height:32px;border:3px solid #eee;border-top-color:#e94560;border-radius:50%;animation:spin 0.7s linear infinite;"></div></div>
+</main>
+<script>
+    var allCards = [];
+    var filteredCards = [];
+    var currentLang = localStorage.getItem('lang') || 'all';
+    var currentSort = 'default';
+    var currentGrade = 'all';
+    var currentBuying = 'all';
+    var displayCount = 0;
+    var LOAD_FIRST = 48;
+    var LOAD_MORE = 24;
+    var isLoading = false;
+
+    var params = new URLSearchParams(window.location.search);
+    var filter = params.get('filter');
+    var chara = params.get('chara');
+    var q = params.get('q');
+
+    var pageTitle = 'カード一覧';
+    if (chara) pageTitle = chara + ' のカード一覧';
+    else if (filter === 'hot') pageTitle = '🔥 今、熱いカード';
+    else if (filter === 'high') pageTitle = '💰 高額カード（$500以上）';
+    else if (filter === 'new') pageTitle = '🆕 新着カード';
+    else if (q) pageTitle = '「' + q + '」の検索結果';
+
+    document.getElementById('page-title').textContent = pageTitle;
+    document.getElementById('breadcrumb-current').textContent = pageTitle;
+    document.title = pageTitle + ' - こうじ君のサイト';
+    if (q) {
+    var searchEl = document.getElementById('search');
+    var headerSearchEl = document.getElementById('header-search-input');
+    if (searchEl) searchEl.value = q;
+    if (headerSearchEl) headerSearchEl.value = q;
+}
+
+    var langMap = { all: 'lang-all', japanese: 'lang-jp', english: 'lang-en' };
+document.querySelectorAll('.lang-tab').forEach(function(t) { t.classList.remove('active'); });
+document.getElementById(langMap[currentLang]).classList.add('active');
+
+    var usdToJpy = 150;
+    fetch('rate.json')
+        .then(function(res) { return res.json(); })
+        .then(function(rate) { usdToJpy = rate.usd_to_jpy; })
+        .catch(function() {});
+
+    fetch('pokemon_data.json')
+        .then(function(res) { return res.json(); })
+        .then(function(data) {
+            allCards = data;
+            filterCards();
+        });
+
+    function isJapanese(card) {
+        var t = card.title.toUpperCase();
+        return t.includes('JAPANESE') || t.includes('JPN') || t.includes('JAPAN');
+    }
+
+    function getLangFiltered(cards) {
+        if (currentLang === 'japanese') return cards.filter(isJapanese);
+        if (currentLang === 'english') return cards.filter(function(c) { return !isJapanese(c); });
+        return cards;
+    }
+
+    function switchLang(lang, el) {
+        currentLang = lang;
+        localStorage.setItem('lang', lang);
+        document.querySelectorAll('.lang-tab').forEach(function(t) { t.classList.remove('active'); });
+        el.classList.add('active');
+        filterCards();
+    }
+
+    function switchBuying(buying, el) {
+        currentBuying = buying;
+        document.querySelectorAll('.buying-tab').forEach(function(t) { t.classList.remove('active'); });
+        el.classList.add('active');
+        filterCards();
+    }
+
+    function switchGrade(grade, el) {
+        currentGrade = grade;
+        document.querySelectorAll('.grade-btn').forEach(function(t) { t.classList.remove('active'); });
+        el.classList.add('active');
+        filterCards();
+    }
+
+    function sortCards(value) {
+        currentSort = value;
+        filterCards();
+    }
+
+    function filterCards() {
+        var headerSearchEl = document.getElementById('header-search-input');
+        var query = (headerSearchEl ? headerSearchEl.value : '').toLowerCase();
+        var cards = getLangFiltered(allCards);
+
+        if (currentBuying !== 'all') {
+            cards = cards.filter(function(c) { return c.buying_option === currentBuying; });
+        }
+        if (currentGrade !== 'all') {
+            cards = cards.filter(function(c) { return c.tags.includes(currentGrade); });
+        }
+        if (chara) {
+            cards = cards.filter(function(c) { return c.tags.includes(chara); });
+        } else if (filter === 'hot') {
+            var auctionTop = cards.filter(function(c) { return c.buying_option === 'AUCTION'; })
+                .sort(function(a, b) { return parseFloat(b.price) - parseFloat(a.price); }).slice(0, 5);
+            var fixedTop = cards.filter(function(c) { return c.buying_option === 'FIXED_PRICE'; })
+                .sort(function(a, b) { return parseFloat(b.price) - parseFloat(a.price); }).slice(0, 5);
+            cards = auctionTop.concat(fixedTop);
+        } else if (filter === 'ending') {
+            cards = cards.filter(function(c) { return c.buying_option === 'AUCTION' && c.end_time; })
+                .sort(function(a, b) { return new Date(a.end_time) - new Date(b.end_time); });
+        } else if (filter === 'new') {
+            cards = cards.sort(function(a, b) { return new Date(b.date) - new Date(a.date); });
+        }
+        if (query) {
+            cards = cards.filter(function(c) {
+                return c.title.toLowerCase().includes(query) ||
+                    c.tags.some(function(t) { return t.toLowerCase().includes(query); });
+            });
+        }
+        if (currentSort === 'price-asc') {
+            cards = cards.slice().sort(function(a, b) { return parseFloat(a.price) - parseFloat(b.price); });
+        } else if (currentSort === 'price-desc') {
+            cards = cards.slice().sort(function(a, b) { return parseFloat(b.price) - parseFloat(a.price); });
+        } else if (currentSort === 'new') {
+            cards = cards.slice().sort(function(a, b) { return new Date(b.date) - new Date(a.date); });
+        }
+
+        filteredCards = cards;
+        displayCount = 0;
+        document.getElementById('card-grid').innerHTML = '';
+        document.getElementById('count').textContent = filteredCards.length + '件';
+        loadMore();
+    }
+
+    function loadMore() {
+        if (isLoading) return;
+        var remaining = filteredCards.length - displayCount;
+        if (remaining <= 0) {
+            document.getElementById('spinner').style.display = 'none';
+            return;
+        }
+        isLoading = true;
+        document.getElementById('spinner').style.display = 'flex';
+
+        setTimeout(function() {
+            var batch = displayCount === 0 ? LOAD_FIRST : LOAD_MORE;
+            var nextCards = filteredCards.slice(displayCount, displayCount + batch);
+            appendCards(nextCards);
+            displayCount += batch;
+            isLoading = false;
+            if (displayCount >= filteredCards.length) {
+                document.getElementById('spinner').style.display = 'none';
+            } else {
+                document.getElementById('spinner').style.display = 'flex';
+            }
+        }, 0);
+    }
+
+    function appendCards(cards) {
+        var grid = document.getElementById('card-grid');
+        if (displayCount === 0 && cards.length === 0) {
+            grid.innerHTML = '<div class="empty"><p>カードが見つかりませんでした</p></div>';
+            return;
+        }
+        cards.forEach(function(card) {
+            var div = document.createElement('div');
+            div.className = 'card';
+            var badge = card.buying_option === 'AUCTION'
+                ? '<span class="card-badge badge-auction">🔨 オークション</span>'
+                : '<span class="card-badge badge-fixed">💰 即決</span>';
+            div.innerHTML =
+                '<img src="' + card.image + '" alt="' + card.title + '" loading="lazy" onerror="this.src=\'https://via.placeholder.com/160x160?text=No+Image\'">' +
+                '<div class="card-info">' +
+                '<div class="card-title">' + card.title + '</div>' +
+                '<div class="card-price">$' + card.price + '</div>' +
+                '<div class="card-jpy">約' + Math.round(parseFloat(card.price) * usdToJpy).toLocaleString() + '円</div>' +
+                badge +
+                '</div>';
+            div.onclick = function() {
+                var originalIndex = allCards.findIndex(function(c) { return c.url === card.url; });
+                window.location.href = 'card.html?index=' + originalIndex + '&lang=' + currentLang;
+            };
+            grid.appendChild(div);
+        });
+    }
+
+    // 無限スクロール監視
+    window.addEventListener('scroll', function() {
+        if (isLoading) return;
+        if (displayCount >= filteredCards.length) return;
+        var scrollBottom = window.scrollY + window.innerHeight;
+        var pageBottom = document.documentElement.scrollHeight - 200;
+        if (scrollBottom >= pageBottom) {
+            loadMore();
+        }
+    });
+</script>
+
+<footer style="background:#1c1c1e;color:#aaa;padding:40px 20px 20px;margin-top:60px;">
+    <div style="max-width:1200px;margin:0 auto;">
+        
+        <!-- ロゴ・キャッチコピー -->
+        <div style="text-align:center;margin-bottom:30px;">
+            <div style="font-size:1.3em;font-weight:bold;color:#fff;margin-bottom:8px;">
+                Grading Pulse <span style="color:#e94560;">ぐれぱる！</span>
+            </div>
+            <div style="font-size:0.85em;color:#aaa;">
+                eBayのPSA鑑定ポケカをまとめて見やすく。
+            </div>
+        </div>
+
+        <!-- リンク -->
+        <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:20px;margin-bottom:30px;font-size:0.85em;">
+            <a href="privacy.html" style="color:#aaa;text-decoration:none;">プライバシーポリシー・免責事項</a>
+            <a href="contact.html" style="color:#aaa;text-decoration:none;">お問い合わせ</a>
+            <a href="sitemap.html" style="color:#aaa;text-decoration:none;">サイトマップ</a>
+        </div>
+
+        <!-- アフィリエイト表記 -->
+        <div style="text-align:center;font-size:0.75em;color:#666;margin-bottom:20px;line-height:1.8;">
+            ※本サイトはeBay Partner Networkに参加しており、紹介料を受け取る場合があります。<br>
+            ※掲載情報は取得時点のものであり、最新情報はeBay公式サイトをご確認ください。
+        </div>
+
+        <!-- コピーライト -->
+        <div style="text-align:center;font-size:0.75em;color:#555;border-top:1px solid #333;padding-top:20px;">
+            © 2026 Grading Pulse All Rights Reserved.
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>
