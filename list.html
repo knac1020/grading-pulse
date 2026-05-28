@@ -156,11 +156,12 @@
     else if (filter === 'hot') pageTitle = '🔥 今、熱いカード';
     else if (filter === 'high') pageTitle = '💰 高額カード（$500以上）';
     else if (filter === 'new') pageTitle = '🆕 新着カード';
+    else if (filter === 'ending') pageTitle = '⏰ 終了間近のオークション';
     else if (q) pageTitle = '「' + q + '」の検索結果';
 
     document.getElementById('page-title').textContent = pageTitle;
     document.getElementById('breadcrumb-current').textContent = pageTitle;
-    document.title = pageTitle + ' - こうじ君のサイト';
+    document.title = pageTitle + ' | Grading Pulse';
     if (q) {
     var searchEl = document.getElementById('search');
     var headerSearchEl = document.getElementById('header-search-input');
