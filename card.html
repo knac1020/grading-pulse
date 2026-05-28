@@ -237,7 +237,7 @@
                 }).slice(0, 6);
 
                 if (related.length > 0) {
-                    document.getElementById('related-title').textContent = '🎴 同じ「' + mainTag + '」のカード';
+                    document.getElementById('related-title').textContent = '関連カード';
                     var grid = document.getElementById('related-grid');
                     related.forEach(function(c) {
                         var originalIndex = cards.findIndex(function(x) { return x.url === c.url; });
