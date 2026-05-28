@@ -246,7 +246,9 @@ document.getElementById(langMap[currentLang]).classList.add('active');
             cards = cards.filter(function(c) { return c.buying_option === 'AUCTION' && c.end_time; })
                 .sort(function(a, b) { return new Date(a.end_time) - new Date(b.end_time); });
         } else if (filter === 'new') {
-            cards = cards.sort(function(a, b) { return new Date(b.date) - new Date(a.date); });
+            var sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+            cards = cards.filter(function(c) { return c.date && new Date(c.date) >= sevenDaysAgo; })
+                .sort(function(a, b) { return new Date(b.date) - new Date(a.date); });
         }
         if (query) {
             cards = cards.filter(function(c) {
