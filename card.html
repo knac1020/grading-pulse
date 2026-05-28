@@ -230,7 +230,7 @@
             });
 
             // 関連カード
-            var mainTag = card.tags[0];
+            var mainTag = card.tags.find(function(t) { return t !== 'PSA10' && t !== 'PSA9' && t !== 'PSA8以下' && t !== 'その他グレード' && t !== 'その他'; }) || card.tags[0];
             if (mainTag && mainTag !== 'その他') {
                 var related = cards.filter(function(c, i) {
                     return i !== index && c.tags.includes(mainTag);
