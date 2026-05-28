@@ -190,7 +190,7 @@
         .then(function(cards) {
             var card = cards[index];
 
-            document.title = card.title + ' - こうじ君のサイト';
+            document.title = card.title + ' | Grading Pulse';
             document.getElementById('breadcrumb-current').textContent = card.title.substring(0, 30) + '...';
             document.getElementById('card-image').src = card.image;
             document.getElementById('card-image').alt = card.title;
