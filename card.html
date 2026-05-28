@@ -57,6 +57,11 @@
         .detail-meta dd { color: #222; font-weight: bold; }
         .ebay-btn { display: block; text-align: center; padding: 15px; background: #e94560; color: #fff; text-decoration: none; border-radius: 8px; font-size: 1.1em; font-weight: bold; transition: background 0.2s; }
         .ebay-btn:hover { background: #c73652; }
+        .share-area { display: flex; gap: 10px; margin-top: 12px; }
+        .share-btn { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: 8px; font-size: 0.9em; font-weight: bold; text-decoration: none; transition: opacity 0.2s; flex: 1; justify-content: center; }
+        .share-btn:hover { opacity: 0.82; }
+        .share-x { background: #000; color: #fff; }
+        .share-line { background: #06c755; color: #fff; }
         .related-section { margin-top: 40px; }
         .related-title { font-size: 1.1em; font-weight: bold; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 2px solid #e94560; }
         .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px; }
@@ -125,6 +130,10 @@
                 </dl>
             </div>
             <a class="ebay-btn" id="ebay-link" href="" target="_blank" rel="noopener noreferrer">🛒 eBayで購入・詳細を見る</a>
+            <div class="share-area">
+                <a class="share-btn share-x" id="share-x" href="" target="_blank" rel="noopener noreferrer">𝕏 ポストする</a>
+                <a class="share-btn share-line" id="share-line" href="" target="_blank" rel="noopener noreferrer">LINE で送る</a>
+            </div>
         </div>
     </article>
 
@@ -189,6 +198,13 @@
             document.getElementById('card-price').textContent = '$' + card.price;
             document.getElementById('card-jpy').textContent = '約' + Math.round(parseFloat(card.price) * usdToJpy).toLocaleString() + '円';
             document.getElementById('ebay-link').href = card.url;
+
+            // シェアボタン
+            var pageUrl = 'https://gureparu.com/card.html?index=' + index;
+            var shareText = encodeURIComponent(card.title + ' $' + card.price + ' ｜ Grading Pulse（ぐれぱる）');
+            var shareUrl = encodeURIComponent(pageUrl);
+            document.getElementById('share-x').href = 'https://twitter.com/intent/tweet?text=' + shareText + '&url=' + shareUrl;
+            document.getElementById('share-line').href = 'https://line.me/R/msg/text/?' + shareText + '%0A' + shareUrl;
 
             // グレード・販売形式をデータから動的に表示
             var gradeTag = card.tags.find(function(t) { return t.startsWith('PSA'); }) || 'その他';
