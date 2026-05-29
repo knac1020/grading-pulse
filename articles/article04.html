@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="apple-touch-icon" href="../favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSA鑑定ポケカを買う際の注意点｜番号確認から個体差まで | Grading Pulse</title>
+    <meta name="description" content="PSA鑑定ポケカを購入する前に知っておきたい注意点。PSA公式番号検索の方法、PSA10でも個体差がある理由、初心者が避けるべき高額カードについて解説。">
+    <link rel="canonical" href="https://gureparu.com/articles/article04.html">
+    <meta property="og:title" content="PSA鑑定ポケカを買う際の注意点｜番号確認から個体差まで | Grading Pulse">
+    <meta property="og:description" content="PSA公式番号検索の方法、PSA10の個体差、初心者が避けるべき高額カードについて解説。">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://gureparu.com/ogp.png">
+    <meta property="og:site_name" content="Grading Pulse（ぐれぱる）">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SD0DS71QS3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SD0DS71QS3');
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: #f8f8f8; color: #1c1c1e; }
+        header { background: #fff; border-bottom: 1px solid #e0e0e0; position: sticky; top: 0; z-index: 100; }
+        .header-inner { max-width: 1400px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; height: 56px; gap: 16px; }
+        .logo-wrap { display: flex; flex-direction: column; flex: 1; text-decoration: none; }
+        .logo-sub { font-size: 0.65em; color: #999; white-space: nowrap; margin-left: 20px; }
+        .header-search { display: flex; align-items: center; border: 1px solid #ddd; border-radius: 25px; overflow: hidden; background: #f5f5f5; max-width: 220px; }
+        .header-search input { border: none; background: transparent; padding: 7px 12px; font-size: 0.85em; outline: none; width: 100%; }
+        .header-search button { border: none; background: none; color: #888; padding: 7px 10px; cursor: pointer; }
+        @media (max-width: 768px) { .header-search { max-width: 140px; } }
+
+        main { max-width: 800px; margin: 0 auto; padding: 40px 20px 60px; }
+        .breadcrumb { font-size: 0.85em; color: #888; margin-bottom: 24px; }
+        .breadcrumb a { color: #e94560; text-decoration: none; }
+
+        .article-header { margin-bottom: 40px; }
+        .article-category { display: inline-block; background: #e94560; color: #fff; font-size: 0.75em; font-weight: bold; padding: 4px 12px; border-radius: 20px; margin-bottom: 14px; letter-spacing: 1px; }
+        h1.article-title { font-size: 1.7em; font-weight: bold; line-height: 1.4; margin-bottom: 16px; color: #1c1c1e; }
+        .article-meta { font-size: 0.82em; color: #999; }
+
+        .toc { background: #f5f5f5; border-radius: 10px; padding: 20px 24px; margin-bottom: 40px; }
+        .toc-title { font-size: 0.9em; font-weight: bold; color: #444; margin-bottom: 12px; }
+        .toc ol { padding-left: 1.4em; }
+        .toc ol li { margin-bottom: 8px; }
+        .toc ol li a { color: #e94560; text-decoration: none; font-size: 0.9em; line-height: 1.5; }
+        .toc ol li a:hover { text-decoration: underline; }
+
+        .article-body h2 { font-size: 1.25em; font-weight: bold; color: #1c1c1e; margin: 48px 0 16px; padding: 10px 16px; border-left: 4px solid #e94560; background: #fff; border-radius: 0 6px 6px 0; }
+        .article-body h3 { font-size: 1.05em; font-weight: bold; color: #333; margin: 28px 0 12px; }
+        .article-body p { font-size: 0.95em; line-height: 1.9; color: #333; margin-bottom: 16px; }
+
+        .warn-box { background: #fff3f5; border: 1px solid #f5c0c8; border-radius: 8px; padding: 16px 20px; margin: 20px 0; }
+        .warn-box .warn-title { font-size: 0.85em; font-weight: bold; color: #e94560; margin-bottom: 8px; }
+        .warn-box ul { padding-left: 1.4em; }
+        .warn-box ul li { font-size: 0.9em; color: #555; line-height: 1.9; }
+
+        .point-box { background: #f0f8ff; border: 1px solid #b8d8f0; border-radius: 8px; padding: 16px 20px; margin: 20px 0; }
+        .point-box .point-title { font-size: 0.85em; font-weight: bold; color: #1a6fa8; margin-bottom: 8px; }
+        .point-box ul { padding-left: 1.4em; }
+        .point-box ul li { font-size: 0.9em; color: #333; line-height: 1.9; }
+
+        .highlight-box { background: #1c1c1e; border-radius: 10px; padding: 20px 24px; margin: 24px 0; }
+        .highlight-box .highlight-title { font-size: 0.85em; font-weight: bold; color: #e94560; margin-bottom: 12px; letter-spacing: 1px; }
+        .highlight-box p { font-size: 0.92em; color: #eee; line-height: 1.9; margin-bottom: 0; }
+        .highlight-box ul { padding-left: 1.4em; }
+        .highlight-box ul li { font-size: 0.92em; color: #eee; line-height: 2; }
+
+        .psa-link { display: inline-flex; align-items: center; gap: 8px; background: #e94560; color: #fff; text-decoration: none; padding: 12px 20px; border-radius: 8px; font-size: 0.9em; font-weight: bold; margin: 16px 0; transition: background 0.2s; }
+        .psa-link:hover { background: #c73652; }
+
+        .back-btn { display: inline-block; margin-top: 40px; padding: 10px 24px; background: #e94560; color: #fff; text-decoration: none; border-radius: 6px; font-size: 0.9em; }
+        .back-btn:hover { background: #c73652; }
+
+        footer { background: #1c1c1e; color: #aaa; padding: 40px 20px 20px; margin-top: 60px; }
+        .footer-inner { max-width: 1200px; margin: 0 auto; }
+        .footer-logo { text-align: center; margin-bottom: 30px; }
+        .footer-logo-name { font-size: 1.3em; font-weight: bold; color: #fff; margin-bottom: 8px; }
+        .footer-logo-sub { font-size: 0.85em; color: #aaa; }
+        .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-bottom: 30px; font-size: 0.85em; }
+        .footer-links a { color: #aaa; text-decoration: none; }
+        .footer-links a:hover { color: #fff; }
+        .footer-affiliate { text-align: center; font-size: 0.75em; color: #666; margin-bottom: 20px; line-height: 1.8; }
+        .footer-copy { text-align: center; font-size: 0.75em; color: #555; border-top: 1px solid #333; padding-top: 20px; }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-inner">
+        <a class="logo-wrap" href="../index.html" aria-label="Grading Pulse トップページへ">
+            <img src="../logo.png" alt="Grading Pulse（ぐれぱる）" style="height:40px;width:auto;max-width:180px;object-fit:contain;">
+            <span class="logo-sub">eBay PSAポケカ出品まとめ</span>
+        </a>
+        <div class="header-search" role="search">
+            <input type="search" placeholder="カード名で検索" aria-label="カードを検索" onkeypress="if(event.key==='Enter'){location.href='../list.html?q='+encodeURIComponent(this.value);}">
+            <button onclick="location.href='../list.html?q='+encodeURIComponent(this.previousElementSibling.value)" aria-label="検索する">🔍</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+        <a href="../index.html">TOP</a> &gt; <a href="../blog.html">お役立ち記事</a> &gt; PSA鑑定ポケカを買う際の注意点
+    </nav>
+
+    <article>
+        <header class="article-header">
+            <span class="article-category">PSA鑑定</span>
+            <h1 class="article-title">PSA鑑定ポケカを買う際の注意点｜番号確認から個体差まで</h1>
+            <p class="article-meta">2026年5月</p>
+        </header>
+
+        <p style="font-size:0.95em;line-height:1.9;color:#333;margin-bottom:24px;">
+            「PSA鑑定済みだから安心」と思って購入すると、思わぬ落とし穴にはまることがあります。PSA鑑定はあくまで「本物である＋状態の評価」であり、完璧な保証ではありません。特に高額カードを買うなら、購入前に知っておきたい注意点があります。
+        </p>
+
+        <nav class="toc" aria-label="目次">
+            <p class="toc-title">📋 目次</p>
+            <ol>
+                <li><a href="#cert">まずPSA公式番号検索を必ずやる</a></li>
+                <li><a href="#psa10">PSA10でも完璧ではない</a></li>
+                <li><a href="#kojintosa">PSA10にも個体差がある</a></li>
+                <li><a href="#beginner">最初は高額カードを狙わない</a></li>
+                <li><a href="#matome">まとめ：初心者の安全な買い方</a></li>
+            </ol>
+        </nav>
+
+        <div class="article-body">
+
+            <section id="cert">
+                <h2>まずPSA公式番号検索を必ずやる</h2>
+                <p>PSA鑑定品を購入する前に、まず最初にやることがあります。それがPSA公式サイトでの番号照合です。PSAケースにはシリアル番号が刻印されており、公式サイトで検索することでそのカードの情報を確認できます。</p>
+
+                <a class="psa-link" href="https://www.psacard.com/cert" target="_blank" rel="noopener noreferrer">🔍 PSA Cert Verification（公式）</a>
+
+                <p>確認すべき内容：</p>
+                <div class="point-box">
+                    <p class="point-title">✅ PSA番号検索で確認すること</p>
+                    <ul>
+                        <li>シリアル番号がケースの番号と一致しているか</li>
+                        <li>カード名が出品されているカードと一致しているか</li>
+                        <li>グレード（PSA10など）が一致しているか</li>
+                    </ul>
+                </div>
+
+                <p>高額カードほど偽造ケースのリスクがあります。リザードン・ピカチュウ・女の子SRなどの人気カードは特に注意が必要です。番号検索で少しでも不一致があれば購入を避けてください。この確認を怠ると取り返しのつかない損失につながる可能性があります。</p>
+            </section>
+
+            <section id="psa10">
+                <h2>PSA10でも完璧ではない</h2>
+                <p>PSA10は最高グレードですが「完璧なカード」を意味するわけではありません。PSA10の基準はあくまでPSAの審査基準であり、実際には以下のような状態のカードでもPSA10を取得していることがあります。</p>
+
+                <div class="warn-box">
+                    <p class="warn-title">⚠️ PSA10でも見られる状態</p>
+                    <ul>
+                        <li>微細な白かけ（特に角）</li>
+                        <li>わずかな横線・スリキズ</li>
+                        <li>センタリングがギリギリ</li>
+                        <li>製造時の初期傷</li>
+                        <li>ケース自体の傷</li>
+                    </ul>
+                </div>
+
+                <p>特に最近の日本語ポケカは「微細な白点ありのPSA10」がかなり多いです。購入前には必ず出品画像を拡大して、四隅・裏面上部・ホロ部分・センタリングを確認するようにしましょう。</p>
+                <p>また、ケースの傷とカードの傷を見分けることも重要です。光の反射を利用すると判断しやすく、ケース傷は光に沿って浮いて見え、カード傷は印刷面に残ります。初心者は「カード傷だと思って敬遠していたら実はケース傷だった」というケースもあります。</p>
+            </section>
+
+            <section id="kojintosa">
+                <h2>PSA10にも個体差がある</h2>
+                <p>コレクター界隈では「強い10」「弱い10」という概念があります。同じPSA10でも見栄えは個体によってかなり異なります。</p>
+
+                <div class="highlight-box">
+                    <p class="highlight-title">「強い10」の特徴</p>
+                    <ul>
+                        <li>センタリングが完璧に中央</li>
+                        <li>白かけが一切見当たらない</li>
+                        <li>ケース自体も綺麗</li>
+                        <li>ホロや印刷のムラがない</li>
+                    </ul>
+                </div>
+
+                <p>コレクション目的で購入するなら、点数だけでなく見栄えを重視することが大切です。PSA9でも非常に綺麗な個体はありますし、PSA10でも見栄えが悪い個体はあります。「PSA10を買う」ことと「綺麗な個体を買う」ことは必ずしもイコールではありません。</p>
+            </section>
+
+            <section id="beginner">
+                <h2>最初は高額カードを狙わない</h2>
+                <p>eBayでのPSA鑑定ポケカ購入に慣れていないうちは、高額カードは避けることをおすすめします。理由はシンプルで、経験が少ない状態で高額カードを買うほどリスクが高くなるからです。</p>
+
+                <div class="warn-box">
+                    <p class="warn-title">⚠️ 高額カードのリスク</p>
+                    <ul>
+                        <li>偽造ケースのターゲットになりやすい</li>
+                        <li>画像だけでは状態の判断が難しい</li>
+                        <li>トラブル発生時の損失が大きい</li>
+                        <li>「安すぎる高額PSA」は基本疑うべき</li>
+                    </ul>
+                </div>
+
+                <p>まずは中価格帯のカードで購入の流れ・画像の見方・セラーの選び方を身につけるのが一番の近道です。経験を積んでから徐々に高額帯にチャレンジしていく方が、長い目で見て事故が少なくなります。</p>
+            </section>
+
+            <section id="matome">
+                <h2>まとめ：初心者の安全な買い方</h2>
+                <p>PSA鑑定品を安全に購入するための基本4ステップです。</p>
+
+                <div class="point-box">
+                    <p class="point-title">✅ 初心者の安全な買い方</p>
+                    <ul>
+                        <li>PSA公式サイトで番号を必ず照合する</li>
+                        <li>出品画像を拡大して四隅・裏面・センタリングを確認する</li>
+                        <li>評価が高く取引数の多いセラーから買う</li>
+                        <li>最初は中価格帯のカードから始める</li>
+                    </ul>
+                </div>
+
+                <p>この4つを徹底するだけで、初心者が陥りがちな事故の大半は防げます。「PSA10だから大丈夫」ではなく、自分の目で確認する習慣をつけることが何より重要です。</p>
+            </section>
+
+        </div>
+    </article>
+
+    <a class="back-btn" href="../blog.html">← お役立ち記事一覧に戻る</a>
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-logo">
+            <p class="footer-logo-name">Grading Pulse <span style="color:#e94560;">ぐれぱる！</span></p>
+            <p class="footer-logo-sub">eBayのPSA鑑定ポケカをまとめて見やすく。</p>
+        </div>
+        <nav class="footer-links" aria-label="フッターナビゲーション">
+            <a href="../privacy.html">プライバシーポリシー・免責事項</a>
+            <a href="../contact.html">お問い合わせ</a>
+            <a href="../sitemap.html">サイトマップ</a>
+        </nav>
+        <p class="footer-affiliate">
+            ※本サイトはeBay Partner Networkに参加しており、紹介料を受け取る場合があります。<br>
+            ※掲載情報は取得時点のものであり、最新情報はeBay公式サイトをご確認ください。
+        </p>
+        <p class="footer-copy">© 2026 Grading Pulse All Rights Reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
