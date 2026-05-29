@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="apple-touch-icon" href="../favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人気ポケモンは日本と海外でこんなに違う｜カード価格にも影響する人気の差 | Grading Pulse</title>
+    <meta name="description" content="日本と海外で人気ポケモンの傾向は大きく異なります。公式投票データをもとに比較し、カード価格への影響まで解説。eBayでポケカを買う前に知っておきたい情報です。">
+    <link rel="canonical" href="https://gureparu.com/articles/article05.html">
+    <meta property="og:title" content="人気ポケモンは日本と海外でこんなに違う｜カード価格にも影響する人気の差 | Grading Pulse">
+    <meta property="og:description" content="公式投票データをもとに日本と海外の人気ポケモンを比較。カード価格への影響まで解説。">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://gureparu.com/ogp.png">
+    <meta property="og:site_name" content="Grading Pulse（ぐれぱる）">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SD0DS71QS3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SD0DS71QS3');
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: #f8f8f8; color: #1c1c1e; }
+        header { background: #fff; border-bottom: 1px solid #e0e0e0; position: sticky; top: 0; z-index: 100; }
+        .header-inner { max-width: 1400px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; height: 56px; gap: 16px; }
+        .logo-wrap { display: flex; flex-direction: column; flex: 1; text-decoration: none; }
+        .logo-sub { font-size: 0.65em; color: #999; white-space: nowrap; margin-left: 20px; }
+        .header-search { display: flex; align-items: center; border: 1px solid #ddd; border-radius: 25px; overflow: hidden; background: #f5f5f5; max-width: 220px; }
+        .header-search input { border: none; background: transparent; padding: 7px 12px; font-size: 0.85em; outline: none; width: 100%; }
+        .header-search button { border: none; background: none; color: #888; padding: 7px 10px; cursor: pointer; }
+        @media (max-width: 768px) { .header-search { max-width: 140px; } }
+
+        main { max-width: 800px; margin: 0 auto; padding: 40px 20px 60px; }
+        .breadcrumb { font-size: 0.85em; color: #888; margin-bottom: 24px; }
+        .breadcrumb a { color: #e94560; text-decoration: none; }
+        .article-header { margin-bottom: 40px; }
+        .article-category { display: inline-block; background: #e94560; color: #fff; font-size: 0.75em; font-weight: bold; padding: 4px 12px; border-radius: 20px; margin-bottom: 14px; letter-spacing: 1px; }
+        h1.article-title { font-size: 1.7em; font-weight: bold; line-height: 1.4; margin-bottom: 16px; color: #1c1c1e; }
+        .article-meta { font-size: 0.82em; color: #999; }
+
+        .toc { background: #f5f5f5; border-radius: 10px; padding: 20px 24px; margin-bottom: 40px; }
+        .toc-title { font-size: 0.9em; font-weight: bold; color: #444; margin-bottom: 12px; }
+        .toc ol { padding-left: 1.4em; }
+        .toc ol li { margin-bottom: 8px; }
+        .toc ol li a { color: #e94560; text-decoration: none; font-size: 0.9em; line-height: 1.5; }
+        .toc ol li a:hover { text-decoration: underline; }
+
+        .article-body h2 { font-size: 1.25em; font-weight: bold; color: #1c1c1e; margin: 48px 0 16px; padding: 10px 16px; border-left: 4px solid #e94560; background: #fff; border-radius: 0 6px 6px 0; }
+        .article-body h3 { font-size: 1.05em; font-weight: bold; color: #333; margin: 28px 0 12px; }
+        .article-body p { font-size: 0.95em; line-height: 1.9; color: #333; margin-bottom: 16px; }
+
+        .rank-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.9em; }
+        .rank-table th { background: #e94560; color: #fff; padding: 10px 14px; text-align: left; font-weight: bold; }
+        .rank-table td { padding: 10px 14px; border-bottom: 1px solid #eee; background: #fff; }
+        .rank-table tr:last-child td { border-bottom: none; }
+        .rank-table td:first-child { color: #e94560; font-weight: bold; width: 60px; }
+
+        .compare-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; }
+        @media (max-width: 600px) { .compare-wrap { grid-template-columns: 1fr; } }
+        .compare-card { border-radius: 10px; padding: 18px 20px; }
+        .compare-card.japan { background: #fff3f5; border: 1px solid #f5c0c8; }
+        .compare-card.world { background: #f0f4ff; border: 1px solid #c0d0f5; }
+        .compare-card .compare-title { font-size: 0.82em; font-weight: bold; margin-bottom: 12px; }
+        .compare-card.japan .compare-title { color: #e94560; }
+        .compare-card.world .compare-title { color: #3a5fd9; }
+        .compare-card ul { padding-left: 1.4em; }
+        .compare-card ul li { font-size: 0.88em; color: #444; line-height: 2; }
+
+        .point-box { background: #f0f8ff; border: 1px solid #b8d8f0; border-radius: 8px; padding: 16px 20px; margin: 20px 0; }
+        .point-box .point-title { font-size: 0.85em; font-weight: bold; color: #1a6fa8; margin-bottom: 8px; }
+        .point-box ul { padding-left: 1.4em; }
+        .point-box ul li { font-size: 0.9em; color: #333; line-height: 1.9; }
+
+        .highlight-box { background: #1c1c1e; border-radius: 10px; padding: 20px 24px; margin: 24px 0; }
+        .highlight-box .highlight-title { font-size: 0.85em; font-weight: bold; color: #e94560; margin-bottom: 12px; letter-spacing: 1px; }
+        .highlight-box p { font-size: 0.92em; color: #eee; line-height: 1.9; margin-bottom: 8px; }
+        .highlight-box ul { padding-left: 1.4em; }
+        .highlight-box ul li { font-size: 0.92em; color: #eee; line-height: 2; }
+
+        .back-btn { display: inline-block; margin-top: 40px; padding: 10px 24px; background: #e94560; color: #fff; text-decoration: none; border-radius: 6px; font-size: 0.9em; }
+        .back-btn:hover { background: #c73652; }
+
+        footer { background: #1c1c1e; color: #aaa; padding: 40px 20px 20px; margin-top: 60px; }
+        .footer-inner { max-width: 1200px; margin: 0 auto; }
+        .footer-logo { text-align: center; margin-bottom: 30px; }
+        .footer-logo-name { font-size: 1.3em; font-weight: bold; color: #fff; margin-bottom: 8px; }
+        .footer-logo-sub { font-size: 0.85em; color: #aaa; }
+        .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-bottom: 30px; font-size: 0.85em; }
+        .footer-links a { color: #aaa; text-decoration: none; }
+        .footer-links a:hover { color: #fff; }
+        .footer-affiliate { text-align: center; font-size: 0.75em; color: #666; margin-bottom: 20px; line-height: 1.8; }
+        .footer-copy { text-align: center; font-size: 0.75em; color: #555; border-top: 1px solid #333; padding-top: 20px; }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-inner">
+        <a class="logo-wrap" href="../index.html" aria-label="Grading Pulse トップページへ">
+            <img src="../logo.png" alt="Grading Pulse（ぐれぱる）" style="height:40px;width:auto;max-width:180px;object-fit:contain;">
+            <span class="logo-sub">eBay PSAポケカ出品まとめ</span>
+        </a>
+        <div class="header-search" role="search">
+            <input type="search" placeholder="カード名で検索" aria-label="カードを検索" onkeypress="if(event.key==='Enter'){location.href='../list.html?q='+encodeURIComponent(this.value);}">
+            <button onclick="location.href='../list.html?q='+encodeURIComponent(this.previousElementSibling.value)" aria-label="検索する">🔍</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+        <a href="../index.html">TOP</a> &gt; <a href="../blog.html">お役立ち記事</a> &gt; 人気ポケモンは日本と海外でこんなに違う
+    </nav>
+
+    <article>
+        <header class="article-header">
+            <span class="article-category">ポケモン知識</span>
+            <h1 class="article-title">人気ポケモンは日本と海外でこんなに違う｜カード価格にも影響する人気の差</h1>
+            <p class="article-meta">2026年5月</p>
+        </header>
+
+        <p style="font-size:0.95em;line-height:1.9;color:#333;margin-bottom:24px;">
+            eBayでポケカを見ていると「なんでこのカードこんなに高いの？」と思うことがありませんか？それは日本と海外で人気ポケモンの傾向がかなり異なるからです。公式の大規模投票データをもとに、日本と海外の人気の違いとカード市場への影響を解説します。
+        </p>
+
+        <nav class="toc" aria-label="目次">
+            <p class="toc-title">📋 目次</p>
+            <ol>
+                <li><a href="#data2016">2016年 日本公式総選挙の結果</a></li>
+                <li><a href="#data2020">2020年 世界規模投票の結果</a></li>
+                <li><a href="#greninja">ゲッコウガが2連覇した理由</a></li>
+                <li><a href="#diff">日本と海外の人気の方向性の違い</a></li>
+                <li><a href="#common">世界共通で強いポケモン</a></li>
+                <li><a href="#card">カード価格への影響</a></li>
+            </ol>
+        </nav>
+
+        <div class="article-body">
+
+            <section id="data2016">
+                <h2>2016年 日本公式総選挙の結果</h2>
+                <p>2016年に日本で開催された「ポケモン総選挙720」は、56万票超が集まった大型公式投票です。全720種が対象で、日本のポケモン人気を測る上で非常に参考になるデータです。</p>
+
+                <table class="rank-table">
+                    <tr><th>順位</th><th>ポケモン</th></tr>
+                    <tr><td>1位</td><td>ゲッコウガ</td></tr>
+                    <tr><td>2位</td><td>アルセウス</td></tr>
+                    <tr><td>3位</td><td>ミュウ</td></tr>
+                    <tr><td>4位</td><td>ピカチュウ</td></tr>
+                    <tr><td>5位</td><td>ニンフィア</td></tr>
+                    <tr><td>6位</td><td>リザードン</td></tr>
+                </table>
+
+                <p>日本でもゲッコウガが1位を獲得しています。ただし2位以下にはミュウ・ニンフィアといった「かわいい・感情移入できる」系のポケモンが並んでいるのが特徴的です。</p>
+            </section>
+
+            <section id="data2020">
+                <h2>2020年 世界規模投票の結果</h2>
+                <p>2020年にGoogleと公式が連携して実施した「Pokémon of the Year」は、全890種を対象とした世界規模の投票です。総投票数は660万票を超え、まさに世界中のポケモンファンの声が集まった結果です。</p>
+
+                <table class="rank-table">
+                    <tr><th>順位</th><th>ポケモン</th></tr>
+                    <tr><td>1位</td><td>ゲッコウガ</td></tr>
+                    <tr><td>2位</td><td>ルカリオ</td></tr>
+                    <tr><td>3位</td><td>ミミッキュ</td></tr>
+                    <tr><td>4位</td><td>リザードン</td></tr>
+                    <tr><td>5位</td><td>ブラッキー</td></tr>
+                    <tr><td>6位</td><td>ニンフィア</td></tr>
+                    <tr><td>7位</td><td>ガブリアス</td></tr>
+                    <tr><td>8位</td><td>レックウザ</td></tr>
+                    <tr><td>9位</td><td>サーナイト</td></tr>
+                    <tr><td>10位</td><td>ゲンガー</td></tr>
+                </table>
+
+                <p>世界投票では上位にルカリオ・ブラッキー・ガブリアス・レックウザなど「強そう・クール」系のポケモンが多く並びます。海外ファンの好みが強く反映された結果と言えます。またピカチュウは19位と意外な結果になりました。</p>
+
+                <div class="highlight-box">
+                    <p class="highlight-title">💡 ピカチュウが19位の理由</p>
+                    <p>ピカチュウはポケモンの象徴的存在ですが、「推し投票」になると別キャラへ票が流れる傾向があります。「みんな好き」だからこそ「熱狂的に推す人」が相対的に少なくなる——マリオの人気投票でマリオが1位にならないのと似た現象です。</p>
+                </div>
+            </section>
+
+            <section id="greninja">
+                <h2>ゲッコウガが2連覇した理由</h2>
+                <p>2016年の日本総選挙でも2020年の世界投票でも1位を獲得したゲッコウガは、日本・海外ともに強いという珍しい成功例です。その理由はかなり明確で、「人気要素の全部盛り」にあります。</p>
+
+                <div class="point-box">
+                    <p class="point-title">✅ ゲッコウガが世界的人気を獲得した要素</p>
+                    <ul>
+                        <li>忍者モチーフ（海外で忍者は非常に人気）</li>
+                        <li>カエルというユニークなシルエット</li>
+                        <li>高速アタッカーとしての対戦性能の高さ</li>
+                        <li>アニメでサトシのパートナーとして大活躍</li>
+                        <li>スマブラへの参戦による知名度の拡大</li>
+                    </ul>
+                </div>
+
+                <p>海外掲示板でも「新世代で最強クラスの人気」と言われ続けています。日本の「アニメ補正」と海外の「クール・強い」という両方の要素を兼ね備えている点が、2連覇を可能にした最大の要因でしょう。</p>
+            </section>
+
+            <section id="diff">
+                <h2>日本と海外の人気の方向性の違い</h2>
+                <p>ざっくりまとめると、日本と海外ではポケモンへの「刺さり方」が根本的に異なります。</p>
+
+                <div class="compare-wrap">
+                    <div class="compare-card japan">
+                        <p class="compare-title">🇯🇵 日本で人気が出やすい傾向</p>
+                        <ul>
+                            <li>かわいい・癒し系</li>
+                            <li>アニメで感情移入できる</li>
+                            <li>グッズ映え・マスコット感</li>
+                            <li>「推し文化」に合う</li>
+                            <li>一緒にいたい感がある</li>
+                        </ul>
+                    </div>
+                    <div class="compare-card world">
+                        <p class="compare-title">🌍 海外で人気が出やすい傾向</p>
+                        <ul>
+                            <li>強そう・カッコいい</li>
+                            <li>ドラゴン・ダーク系</li>
+                            <li>対戦性能が高い</li>
+                            <li>edgy（尖ったカッコよさ）</li>
+                            <li>メガ進化・迫力あるデザイン</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p>世代別の1位を見るとこの傾向がさらにはっきりします。カントー（リザードン）・ジョウト（ブラッキー）・ホウエン（レックウザ）・シンオウ（ルカリオ）・カロス（ゲッコウガ）と、ほぼ全世代で「海外人気強キャラ」が世界投票の各世代1位を獲得しています。</p>
+            </section>
+
+            <section id="common">
+                <h2>世界共通で強いポケモン</h2>
+                <p>日本と海外で人気傾向が違う一方で、国を超えて強い人気を誇るポケモンもいます。</p>
+
+                <div class="point-box">
+                    <p class="point-title">✅ 世界共通で強いポケモン</p>
+                    <ul>
+                        <li>ピカチュウ（ポケモンの象徴）</li>
+                        <li>リザードン（世代を超えた絶大な人気）</li>
+                        <li>イーブイ（日本のかわいさ＋海外の進化の多様性）</li>
+                        <li>ゲンガー（ゴーストの代名詞として世界的人気）</li>
+                        <li>ミュウツー（初代からの圧倒的知名度）</li>
+                    </ul>
+                </div>
+
+                <p>特にピカチュウはもはや「ポケモンそのものの象徴」として世界中に認知されており、人気というより別格の立ち位置にあります。</p>
+            </section>
+
+            <section id="card">
+                <h2>カード価格への影響</h2>
+                <p>ポケモンの人気傾向はそのままカード市場の価格にも反映されます。eBayで海外向けのカードを見ていると、日本市場では想像しにくい価格帯になっていることがあるのはこのためです。</p>
+
+                <div class="compare-wrap">
+                    <div class="compare-card japan">
+                        <p class="compare-title">🇯🇵 日本市場で強いカード</p>
+                        <ul>
+                            <li>女の子SAR・トレーナー系</li>
+                            <li>ピカチュウ・イーブイ系</li>
+                            <li>かわいいデザインのカード</li>
+                            <li>アニメキャラ系</li>
+                        </ul>
+                    </div>
+                    <div class="compare-card world">
+                        <p class="compare-title">🌍 海外市場で強いカード</p>
+                        <ul>
+                            <li>リザードン（別格の強さ）</li>
+                            <li>ルギア・レックウザ</li>
+                            <li>ゲンガー・ルカリオ</li>
+                            <li>強キャラ・ドラゴン系全般</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p>eBayでリザードン系のカードが異常に高値になっていたり、日本ではそこまで注目されていないゲンガーのカードが高騰していたりするのは、海外人気が直接反映されているからです。逆に日本で人気の女の子SARは、海外ではそこまで価格が上がりにくい傾向があります。</p>
+                <p>eBayでカードを探す際には「このポケモンは海外でどれくらい人気なのか」を意識するだけで、価格の相場感が掴みやすくなります。</p>
+            </section>
+
+        </div>
+    </article>
+
+    <a class="back-btn" href="../blog.html">← お役立ち記事一覧に戻る</a>
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-logo">
+            <p class="footer-logo-name">Grading Pulse <span style="color:#e94560;">ぐれぱる！</span></p>
+            <p class="footer-logo-sub">eBayのPSA鑑定ポケカをまとめて見やすく。</p>
+        </div>
+        <nav class="footer-links" aria-label="フッターナビゲーション">
+            <a href="../privacy.html">プライバシーポリシー・免責事項</a>
+            <a href="../contact.html">お問い合わせ</a>
+            <a href="../sitemap.html">サイトマップ</a>
+        </nav>
+        <p class="footer-affiliate">
+            ※本サイトはeBay Partner Networkに参加しており、紹介料を受け取る場合があります。<br>
+            ※掲載情報は取得時点のものであり、最新情報はeBay公式サイトをご確認ください。
+        </p>
+        <p class="footer-copy">© 2026 Grading Pulse All Rights Reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
