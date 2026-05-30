@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="apple-touch-icon" href="../favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポケカの関税は絶対0％なの？HSコードと税率の仕組みを解説 | Grading Pulse</title>
+    <meta name="description" content="ポケカの関税がゼロになる理由をHSコードと税率の仕組みから解説。9504.40と9504.90の違い、WTO協定税率、輸入消費税との関係まで正確にまとめました。">
+    <link rel="canonical" href="https://gureparu.com/articles/article06.html">
+    <meta property="og:title" content="ポケカの関税は絶対0％なの？HSコードと税率の仕組みを解説 | Grading Pulse">
+    <meta property="og:description" content="ポケカの関税がゼロになる理由をHSコードと税率の仕組みから解説。">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://gureparu.com/ogp.png">
+    <meta property="og:site_name" content="Grading Pulse（ぐれぱる）">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SD0DS71QS3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SD0DS71QS3');
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: #f8f8f8; color: #1c1c1e; }
+        header { background: #fff; border-bottom: 1px solid #e0e0e0; position: sticky; top: 0; z-index: 100; }
+        .header-inner { max-width: 1400px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; height: 56px; gap: 16px; }
+        .logo-wrap { display: flex; flex-direction: column; flex: 1; text-decoration: none; }
+        .logo-sub { font-size: 0.65em; color: #999; white-space: nowrap; margin-left: 20px; }
+        .header-search { display: flex; align-items: center; border: 1px solid #ddd; border-radius: 25px; overflow: hidden; background: #f5f5f5; max-width: 220px; }
+        .header-search input { border: none; background: transparent; padding: 7px 12px; font-size: 0.85em; outline: none; width: 100%; }
+        .header-search button { border: none; background: none; color: #888; padding: 7px 10px; cursor: pointer; }
+        @media (max-width: 768px) { .header-search { max-width: 140px; } }
+
+        main { max-width: 800px; margin: 0 auto; padding: 40px 20px 60px; }
+        .breadcrumb { font-size: 0.85em; color: #888; margin-bottom: 24px; }
+        .breadcrumb a { color: #e94560; text-decoration: none; }
+        .article-header { margin-bottom: 40px; }
+        .article-category { display: inline-block; background: #e94560; color: #fff; font-size: 0.75em; font-weight: bold; padding: 4px 12px; border-radius: 20px; margin-bottom: 14px; letter-spacing: 1px; }
+        h1.article-title { font-size: 1.7em; font-weight: bold; line-height: 1.4; margin-bottom: 16px; color: #1c1c1e; }
+        .article-meta { font-size: 0.82em; color: #999; }
+
+        .toc { background: #f5f5f5; border-radius: 10px; padding: 20px 24px; margin-bottom: 40px; }
+        .toc-title { font-size: 0.9em; font-weight: bold; color: #444; margin-bottom: 12px; }
+        .toc ol { padding-left: 1.4em; }
+        .toc ol li { margin-bottom: 8px; }
+        .toc ol li a { color: #e94560; text-decoration: none; font-size: 0.9em; line-height: 1.5; }
+        .toc ol li a:hover { text-decoration: underline; }
+
+        .article-body h2 { font-size: 1.25em; font-weight: bold; color: #1c1c1e; margin: 48px 0 16px; padding: 10px 16px; border-left: 4px solid #e94560; background: #fff; border-radius: 0 6px 6px 0; }
+        .article-body p { font-size: 0.95em; line-height: 1.9; color: #333; margin-bottom: 16px; }
+        .article-body a { color: #e94560; }
+
+        .warn-box { background: #fff3f5; border: 1px solid #f5c0c8; border-radius: 8px; padding: 16px 20px; margin: 20px 0; }
+        .warn-box .warn-title { font-size: 0.85em; font-weight: bold; color: #e94560; margin-bottom: 8px; }
+        .warn-box p { font-size: 0.9em; color: #555; line-height: 1.9; margin: 0; }
+
+        .point-box { background: #f0f8ff; border: 1px solid #b8d8f0; border-radius: 8px; padding: 16px 20px; margin: 20px 0; }
+        .point-box .point-title { font-size: 0.85em; font-weight: bold; color: #1a6fa8; margin-bottom: 8px; }
+        .point-box ul { padding-left: 1.4em; }
+        .point-box ul li { font-size: 0.9em; color: #333; line-height: 1.9; }
+
+        .dark-box { background: #1c1c1e; border-radius: 10px; padding: 18px 22px; margin: 20px 0; }
+        .dark-box .dark-title { font-size: 0.85em; font-weight: bold; color: #e94560; margin-bottom: 10px; }
+        .dark-box p { font-size: 0.88em; color: #eee; line-height: 1.8; margin: 0; }
+
+        .rank-table { width: 100%; border-collapse: collapse; font-size: 0.88em; margin: 20px 0; }
+        .rank-table th { background: #e94560; color: #fff; padding: 10px 14px; text-align: left; font-weight: bold; }
+        .rank-table td { padding: 10px 14px; border-bottom: 1px solid #eee; background: #fff; color: #1c1c1e; }
+        .rank-table tr:nth-child(even) td { background: #f8f8f8; }
+        .rank-table tr:last-child td { border-bottom: none; }
+        .tax-zero { color: #22a06b; font-weight: bold; }
+        .tax-rate { color: #e94560; font-weight: bold; }
+
+        .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 18px; border-left: 3px solid #ddd; margin-top: 40px; }
+        .disclaimer p { font-size: 0.82em; color: #888; line-height: 1.8; margin: 0; }
+
+        .back-btn { display: inline-block; margin-top: 24px; padding: 10px 24px; background: #e94560; color: #fff; text-decoration: none; border-radius: 6px; font-size: 0.9em; }
+        .back-btn:hover { background: #c73652; }
+
+        footer { background: #1c1c1e; color: #aaa; padding: 40px 20px 20px; margin-top: 60px; }
+        .footer-inner { max-width: 1200px; margin: 0 auto; }
+        .footer-logo { text-align: center; margin-bottom: 30px; }
+        .footer-logo-name { font-size: 1.3em; font-weight: bold; color: #fff; margin-bottom: 8px; }
+        .footer-logo-sub { font-size: 0.85em; color: #aaa; }
+        .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-bottom: 30px; font-size: 0.85em; }
+        .footer-links a { color: #aaa; text-decoration: none; }
+        .footer-links a:hover { color: #fff; }
+        .footer-affiliate { text-align: center; font-size: 0.75em; color: #666; margin-bottom: 20px; line-height: 1.8; }
+        .footer-copy { text-align: center; font-size: 0.75em; color: #555; border-top: 1px solid #333; padding-top: 20px; }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-inner">
+        <a class="logo-wrap" href="../index.html" aria-label="Grading Pulse トップページへ">
+            <img src="../logo.png" alt="Grading Pulse（ぐれぱる）" style="height:40px;width:auto;max-width:180px;object-fit:contain;">
+            <span class="logo-sub">eBay PSAポケカ出品まとめ</span>
+        </a>
+        <div class="header-search" role="search">
+            <input type="search" placeholder="カード名で検索" aria-label="カードを検索" onkeypress="if(event.key==='Enter'){location.href='../list.html?q='+encodeURIComponent(this.value);}">
+            <button onclick="location.href='../list.html?q='+encodeURIComponent(this.previousElementSibling.value)" aria-label="検索する">🔍</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+        <a href="../index.html">TOP</a> &gt; <a href="../blog.html">お役立ち記事</a> &gt; ポケカの関税は絶対0％なの？
+    </nav>
+
+    <article>
+        <header class="article-header">
+            <span class="article-category">関税・輸入</span>
+            <h1 class="article-title">ポケカの関税は絶対0％なの？HSコードと税率の仕組みを解説</h1>
+            <p class="article-meta">2026年5月</p>
+        </header>
+
+        <p style="font-size:0.95em;line-height:1.9;color:#333;margin-bottom:24px;">「ポケカは関税がかからない」とよく言われますが、その理由を正確に説明できる人は少ないです。実はHSコードの分類と税率の優先順位が複雑に絡み合っており、「絶対に無税」でも「必ず課税」でもない、判断が分かれる部分が存在します。この記事では関税の仕組みをできるだけ正確に解説します。</p>
+
+        <nav class="toc" aria-label="目次">
+            <p class="toc-title">📋 目次</p>
+            <ol>
+                <li><a href="#hscode">HSコードとは何か</a></li>
+                <li><a href="#bunrui">ポケカはどのHSコードに分類される？</a></li>
+                <li><a href="#wto">基本税率とWTO協定税率の違い</a></li>
+                <li><a href="#zero">なぜ「無税」になるケースが多いのか</a></li>
+                <li><a href="#shouhizei">関税ゼロでも消費税はかかる</a></li>
+                <li><a href="#matome">まとめ</a></li>
+            </ol>
+        </nav>
+
+        <div class="article-body">
+
+            <section id="hscode">
+                <h2>HSコードとは何か</h2>
+                <p>HSコード（Harmonized System Code）は、世界共通の輸出入品分類番号です。税関ではこの番号をもとに関税率を決定します。同じ商品でもHSコードの分類によって税率が変わるため、どの番号に分類されるかが非常に重要です。</p>
+                <p>セラーがインボイスに記載したHSコードや商品説明が、日本税関での分類に影響を与えます。海外セラーが「Toys」「Game」「Playing cards」「Collectibles」など大まかな記載をすることがあり、それによって分類が変わることもあります。</p>
+            </section>
+
+            <section id="bunrui">
+                <h2>ポケカはどのHSコードに分類される？</h2>
+                <p>ポケモンカードは税関上、主に以下の2つの分類周辺で扱われます。</p>
+
+                <table class="rank-table">
+                    <thead>
+                        <tr><th>HSコード</th><th>内容</th><th>基本税率</th><th>WTO税率</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>9504.40</strong></td>
+                            <td>トランプ類・カードゲーム類</td>
+                            <td class="tax-rate">3.8%</td>
+                            <td class="tax-rate">3.2%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>9504.90</strong></td>
+                            <td>その他の遊戯用具（その他のもの）</td>
+                            <td class="tax-zero">無税</td>
+                            <td class="tax-zero">無税</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="warn-box">
+                    <p class="warn-title">⚠️ 重要：9504.40と9504.90は別の分類</p>
+                    <p>9504.90の中に9504.40があるわけではありません。これらは別々のHSコードです。ポケカがどちらに分類されるかは、インボイスの記載内容や税関の判断によって変わります。</p>
+                </div>
+            </section>
+
+            <section id="wto">
+                <h2>基本税率とWTO協定税率の違い</h2>
+                <p>日本の関税には複数の税率が存在し、原則として最も低い税率が適用されます。</p>
+
+                <table class="rank-table">
+                    <thead>
+                        <tr><th>種類</th><th>内容</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>基本税率</strong></td><td>日本国内法の通常税率</td></tr>
+                        <tr><td><strong>WTO協定税率</strong></td><td>WTO加盟国向け優遇税率。基本税率より低い場合に優先適用される</td></tr>
+                    </tbody>
+                </table>
+
+                <p>アメリカ・イギリスなどWTO加盟国からの輸入では、WTO協定税率が適用されます。9504.40に分類された場合は基本3.8%→WTO3.2%になりますが、そもそも無税の9504.90に分類されれば税率の議論自体が不要になります。</p>
+            </section>
+
+            <section id="zero">
+                <h2>なぜ「無税」になるケースが多いのか</h2>
+                <p>実務上、ポケモンカードは9504.90「その他のもの（無税）」として処理されるケースが非常に多いです。これが「ポケカは関税がかからない」と言われる理由です。</p>
+                <p>ただし、これは法律で「ポケモンカードは9504.90」と固定されているわけではありません。通関申告の内容・インボイスの商品説明・通関業者・税関の判断によって変わります。</p>
+
+                <div class="dark-box">
+                    <p class="dark-title">インボイスの商品説明について</p>
+                    <p>インボイスの商品説明を「Trading Card」または「Collectible Trading Card」と正確に記載してもらうことで、9504.90として処理されやすくなるとされています。</p>
+                </div>
+            </section>
+
+            <section id="shouhizei">
+                <h2>関税ゼロでも消費税はかかる</h2>
+                <p>関税が無税になっても、輸入消費税（10%）と地方消費税は別途かかります。高額カードになるほどこの金額は大きくなります。「関税ゼロ＝税金ゼロ」ではない点は必ず覚えておいてください。</p>
+                <p>実際にeBayでポケカを輸入した際に請求されるのは、ほぼこの輸入消費税です。詳しくは<a href="article02.html">こちらの関税・消費税の解説記事</a>もご覧ください。</p>
+            </section>
+
+            <section id="matome">
+                <h2>まとめ</h2>
+                <div class="point-box">
+                    <p class="point-title">✅ ポケカ関税のまとめ</p>
+                    <ul>
+                        <li>ポケカは9504.90「その他のもの（無税）」で処理されるケースが多い</li>
+                        <li>9504.40に分類された場合はWTO税率3.2%が適用される可能性がある</li>
+                        <li>「関税ゼロ」は法律で保証されたものではなく、実務上の傾向</li>
+                        <li>関税が無税でも輸入消費税（10%）は別途かかる</li>
+                        <li>インボイスへの正確な商品説明がHSコード分類に影響する場合がある</li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+
+        <div class="disclaimer">
+            <p>本記事の内容は管理人の経験および調査に基づく私見であり、特定の税務処理や関税分類を保証するものではありません。実際の輸入に際しては、税関や通関業者にご確認いただくことをおすすめします。</p>
+        </div>
+    </article>
+
+    <a class="back-btn" href="../blog.html">← お役立ち記事一覧に戻る</a>
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-logo">
+            <p class="footer-logo-name">Grading Pulse <span style="color:#e94560;">ぐれぱる！</span></p>
+            <p class="footer-logo-sub">eBayのPSA鑑定ポケカをまとめて見やすく。</p>
+        </div>
+        <nav class="footer-links" aria-label="フッターナビゲーション">
+            <a href="../privacy.html">プライバシーポリシー・免責事項</a>
+            <a href="../contact.html">お問い合わせ</a>
+            <a href="../sitemap.html">サイトマップ</a>
+        </nav>
+        <p class="footer-affiliate">
+            ※本サイトはeBay Partner Networkに参加しており、紹介料を受け取る場合があります。<br>
+            ※掲載情報は取得時点のものであり、最新情報はeBay公式サイトをご確認ください。
+        </p>
+        <p class="footer-copy">© 2026 Grading Pulse All Rights Reserved.</p>
+    </div>
+</footer>
+</body>
+</html>

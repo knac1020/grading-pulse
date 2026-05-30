@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="apple-touch-icon" href="../favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポケカのHSコードの決まる基準は？BOX購入とシングル購入で関税が変わる可能性について | Grading Pulse</title>
+    <meta name="description" content="ポケカのHSコードは何で決まるのか。BOX・パック購入とPSAシングルカード購入で関税の扱いが変わる理由を解説。第97類（収集品）にならない理由も。">
+    <link rel="canonical" href="https://gureparu.com/articles/article07.html">
+    <meta property="og:title" content="ポケカのHSコードの決まる基準は？BOX購入とシングル購入で関税が変わる可能性について | Grading Pulse">
+    <meta property="og:description" content="BOX購入とPSAシングルカード購入で関税の扱いが変わる理由を解説。">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://gureparu.com/ogp.png">
+    <meta property="og:site_name" content="Grading Pulse（ぐれぱる）">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SD0DS71QS3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SD0DS71QS3');
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: #f8f8f8; color: #1c1c1e; }
+        header { background: #fff; border-bottom: 1px solid #e0e0e0; position: sticky; top: 0; z-index: 100; }
+        .header-inner { max-width: 1400px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; height: 56px; gap: 16px; }
+        .logo-wrap { display: flex; flex-direction: column; flex: 1; text-decoration: none; }
+        .logo-sub { font-size: 0.65em; color: #999; white-space: nowrap; margin-left: 20px; }
+        .header-search { display: flex; align-items: center; border: 1px solid #ddd; border-radius: 25px; overflow: hidden; background: #f5f5f5; max-width: 220px; }
+        .header-search input { border: none; background: transparent; padding: 7px 12px; font-size: 0.85em; outline: none; width: 100%; }
+        .header-search button { border: none; background: none; color: #888; padding: 7px 10px; cursor: pointer; }
+        @media (max-width: 768px) { .header-search { max-width: 140px; } }
+
+        main { max-width: 800px; margin: 0 auto; padding: 40px 20px 60px; }
+        .breadcrumb { font-size: 0.85em; color: #888; margin-bottom: 24px; }
+        .breadcrumb a { color: #e94560; text-decoration: none; }
+        .article-header { margin-bottom: 40px; }
+        .article-category { display: inline-block; background: #e94560; color: #fff; font-size: 0.75em; font-weight: bold; padding: 4px 12px; border-radius: 20px; margin-bottom: 14px; letter-spacing: 1px; }
+        h1.article-title { font-size: 1.7em; font-weight: bold; line-height: 1.4; margin-bottom: 16px; color: #1c1c1e; }
+        .article-meta { font-size: 0.82em; color: #999; }
+
+        .toc { background: #f5f5f5; border-radius: 10px; padding: 20px 24px; margin-bottom: 40px; }
+        .toc-title { font-size: 0.9em; font-weight: bold; color: #444; margin-bottom: 12px; }
+        .toc ol { padding-left: 1.4em; }
+        .toc ol li { margin-bottom: 8px; }
+        .toc ol li a { color: #e94560; text-decoration: none; font-size: 0.9em; line-height: 1.5; }
+        .toc ol li a:hover { text-decoration: underline; }
+
+        .article-body h2 { font-size: 1.25em; font-weight: bold; color: #1c1c1e; margin: 48px 0 16px; padding: 10px 16px; border-left: 4px solid #e94560; background: #fff; border-radius: 0 6px 6px 0; }
+        .article-body p { font-size: 0.95em; line-height: 1.9; color: #333; margin-bottom: 16px; }
+        .article-body a { color: #e94560; }
+
+        .warn-box { background: #fff3f5; border: 1px solid #f5c0c8; border-radius: 8px; padding: 16px 20px; margin: 20px 0; }
+        .warn-box .warn-title { font-size: 0.85em; font-weight: bold; color: #e94560; margin-bottom: 8px; }
+        .warn-box ul { padding-left: 1.4em; }
+        .warn-box ul li { font-size: 0.9em; color: #555; line-height: 1.9; }
+
+        .point-box { background: #f0f8ff; border: 1px solid #b8d8f0; border-radius: 8px; padding: 16px 20px; margin: 20px 0; }
+        .point-box .point-title { font-size: 0.85em; font-weight: bold; color: #1a6fa8; margin-bottom: 8px; }
+        .point-box ul { padding-left: 1.4em; }
+        .point-box ul li { font-size: 0.9em; color: #333; line-height: 1.9; }
+
+        .compare-wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 20px 0; }
+        .compare-card { background: #f5f5f5; border-radius: 10px; padding: 16px; }
+        .compare-card .compare-title { font-size: 0.8em; font-weight: bold; margin-bottom: 10px; }
+        .compare-card.red .compare-title { color: #e94560; }
+        .compare-card.blue .compare-title { color: #1a6fa8; }
+        .compare-card ul { padding-left: 1.2em; }
+        .compare-card ul li { font-size: 0.85em; color: #444; line-height: 2; }
+
+        .dark-box { background: #1c1c1e; border-radius: 10px; padding: 18px 22px; margin: 20px 0; }
+        .dark-box .dark-title { font-size: 0.85em; font-weight: bold; color: #e94560; margin-bottom: 10px; }
+        .dark-box ul { padding-left: 1.4em; }
+        .dark-box ul li { font-size: 0.88em; color: #eee; line-height: 2; }
+
+        .rank-table { width: 100%; border-collapse: collapse; font-size: 0.88em; margin: 20px 0; }
+        .rank-table th { background: #1a6fa8; color: #fff; padding: 10px 14px; text-align: left; font-weight: bold; }
+        .rank-table td { padding: 10px 14px; border-bottom: 1px solid #dce8f5; background: #fff; color: #1c1c1e; }
+        .rank-table tr:last-child td { border-bottom: none; }
+        .tax-zero { color: #22a06b; font-weight: bold; }
+        .tax-rate { color: #e94560; font-weight: bold; }
+        .tax-mid { color: #888; }
+
+        .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 18px; border-left: 3px solid #ddd; margin-top: 40px; }
+        .disclaimer p { font-size: 0.82em; color: #888; line-height: 1.8; margin: 0; }
+
+        .back-btn { display: inline-block; margin-top: 24px; padding: 10px 24px; background: #e94560; color: #fff; text-decoration: none; border-radius: 6px; font-size: 0.9em; }
+        .back-btn:hover { background: #c73652; }
+
+        footer { background: #1c1c1e; color: #aaa; padding: 40px 20px 20px; margin-top: 60px; }
+        .footer-inner { max-width: 1200px; margin: 0 auto; }
+        .footer-logo { text-align: center; margin-bottom: 30px; }
+        .footer-logo-name { font-size: 1.3em; font-weight: bold; color: #fff; margin-bottom: 8px; }
+        .footer-logo-sub { font-size: 0.85em; color: #aaa; }
+        .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-bottom: 30px; font-size: 0.85em; }
+        .footer-links a { color: #aaa; text-decoration: none; }
+        .footer-links a:hover { color: #fff; }
+        .footer-affiliate { text-align: center; font-size: 0.75em; color: #666; margin-bottom: 20px; line-height: 1.8; }
+        .footer-copy { text-align: center; font-size: 0.75em; color: #555; border-top: 1px solid #333; padding-top: 20px; }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-inner">
+        <a class="logo-wrap" href="../index.html" aria-label="Grading Pulse トップページへ">
+            <img src="../logo.png" alt="Grading Pulse（ぐれぱる）" style="height:40px;width:auto;max-width:180px;object-fit:contain;">
+            <span class="logo-sub">eBay PSAポケカ出品まとめ</span>
+        </a>
+        <div class="header-search" role="search">
+            <input type="search" placeholder="カード名で検索" aria-label="カードを検索" onkeypress="if(event.key==='Enter'){location.href='../list.html?q='+encodeURIComponent(this.value);}">
+            <button onclick="location.href='../list.html?q='+encodeURIComponent(this.previousElementSibling.value)" aria-label="検索する">🔍</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+        <a href="../index.html">TOP</a> &gt; <a href="../blog.html">お役立ち記事</a> &gt; ポケカのHSコードの決まる基準は？
+    </nav>
+
+    <article>
+        <header class="article-header">
+            <span class="article-category">関税・輸入</span>
+            <h1 class="article-title">ポケカのHSコードの決まる基準は？BOX購入とシングル購入で関税が変わる可能性について</h1>
+            <p class="article-meta">2026年5月</p>
+        </header>
+
+        <p style="font-size:0.95em;line-height:1.9;color:#333;margin-bottom:24px;">前の記事でポケカのHSコードが9504.40と9504.90の間で揺れることを解説しました。では実際に何が基準で分類が変わるのでしょうか。BOXで購入した場合とPSAシングルカードを購入した場合では、税関の見方が違ってくる可能性があります。その理由を掘り下げます。</p>
+
+        <nav class="toc" aria-label="目次">
+            <p class="toc-title">📋 目次</p>
+            <ol>
+                <li><a href="#kijun">HSコードの分類は「商品の客観的な状態」で決まる</a></li>
+                <li><a href="#box">BOX・パック購入の場合</a></li>
+                <li><a href="#psa">PSAシングルカード購入の場合</a></li>
+                <li><a href="#97rui">「収集品」として第97類にはならないの？</a></li>
+                <li><a href="#matome">まとめ</a></li>
+            </ol>
+        </nav>
+
+        <div class="article-body">
+
+            <section id="kijun">
+                <h2>HSコードの分類は「商品の客観的な状態」で決まる</h2>
+                <p>HSコードの分類は商品名や売り手の意図ではなく、その商品の客観的な性質・形態・用途によって判断されます。つまり「ポケモンカード」という名前だけで分類が決まるわけではなく、どんな状態で輸入されるかが重要です。</p>
+                <p>税関は「この商品は本質的に何なのか」を見ます。同じポケカでも、未開封BOXとPSA鑑定済みシングルカードでは、見た目も形態も実態もまったく異なります。</p>
+            </section>
+
+            <section id="box">
+                <h2>BOX・パック購入の場合</h2>
+                <p>未開封のブースターBOXやスターターデッキは、商品としての性格が「カードゲーム商品」そのものです。パッケージには遊び方の説明が記載され、販売形態もゲーム商品として流通しています。</p>
+
+                <div class="warn-box">
+                    <p class="warn-title">BOX・パックが9504.40寄りになりやすい理由</p>
+                    <ul>
+                        <li>商品パッケージが「カードゲーム商品」として設計されている</li>
+                        <li>開封してプレイするという使用目的が明確</li>
+                        <li>販売形態がゲーム商品として一般流通している</li>
+                        <li>インボイスに「Booster Box」「Starter Deck」と記載されやすい</li>
+                    </ul>
+                </div>
+
+                <p>9504.40（遊戯用カード）のWTO税率は3.2%です。ただし実務上は9504.90（無税）として処理されるケースもあります。前の記事で解説した通り、分類は税関の判断によって変わるため、必ずしも課税されるわけではありません。</p>
+            </section>
+
+            <section id="psa">
+                <h2>PSAシングルカード購入の場合</h2>
+                <p>PSA鑑定済みのシングルカードは、BOXと同じ「ポケモンカード」でも実態がまったく異なります。硬質ケースに封入され、鑑定番号が付与され、高額で取引される——これを見て「このカードでゲームをする」とは思わないはずです。</p>
+
+                <div class="compare-wrap">
+                    <div class="compare-card red">
+                        <p class="compare-title">未開封BOXの印象</p>
+                        <ul>
+                            <li>開封して遊ぶゲーム商品</li>
+                            <li>パッケージに遊び方の記載</li>
+                            <li>量販店でも販売</li>
+                        </ul>
+                    </div>
+                    <div class="compare-card blue">
+                        <p class="compare-title">PSAシングルカードの印象</p>
+                        <ul>
+                            <li>硬質ケース封入済み</li>
+                            <li>鑑定番号・グレード付き</li>
+                            <li>コレクター市場中心</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p>この「客観的な状態の違い」が、PSAカードを9504.90（その他・無税）として処理されやすくしている要因のひとつと考えられます。インボイスに「Graded Trading Card」「Collectible Trading Card」と記載されていれば、さらにその傾向が強まります。</p>
+                <p>ただし繰り返しになりますが、これはあくまで「そう処理されやすい」という実務上の傾向であり、分類は税関の判断によって変わります。</p>
+            </section>
+
+            <section id="97rui">
+                <h2>「収集品」として第97類にはならないの？</h2>
+                <p>HSコードには第97類という「美術品・収集品・骨とう」の章が存在します。PSAカードがコレクターに取引される以上、こちらに分類されないのかという疑問は自然です。</p>
+                <p>しかし第97類はかなり限定的な分類で、主に歴史的・考古学的・民族学的な価値を持つものが対象です。「人気があって高額」というだけでは第97類には入りません。現代の量産品であるポケモンカードは、たとえ100万円のPSA10であっても、通常は第97類にはならないと考えられています。</p>
+
+                <div class="dark-box">
+                    <p class="dark-title">第97類（収集品）が対象とするもの</p>
+                    <ul>
+                        <li>歴史的・考古学的価値を持つもの（古代遺物など）</li>
+                        <li>民族学的価値を持つもの</li>
+                        <li>切手・コインなどの伝統的収集品</li>
+                        <li>絵画・版画・彫刻などの美術品</li>
+                    </ul>
+                </div>
+
+                <p>結果として、ポケカの関税論争は「第97類か9504か」ではなく、「9504.40（遊戯カード・3.2%）か9504.90（その他・無税）か」という9504内での解釈の問題になります。</p>
+            </section>
+
+            <section id="matome">
+                <h2>まとめ</h2>
+                <div class="point-box">
+                    <p class="point-title">✅ BOX vs PSAシングルのまとめ</p>
+                </div>
+                <table class="rank-table">
+                    <thead>
+                        <tr><th>商品の種類</th><th>HSコードの傾向</th><th>税率の傾向</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>未開封BOX・パック</td>
+                            <td>9504.40寄り</td>
+                            <td class="tax-rate">WTO3.2%の可能性あり</td>
+                        </tr>
+                        <tr>
+                            <td>プレイ用シングル</td>
+                            <td>9504.40〜9504.90</td>
+                            <td class="tax-mid">判断による</td>
+                        </tr>
+                        <tr>
+                            <td>PSA鑑定シングル</td>
+                            <td>9504.90寄り</td>
+                            <td class="tax-zero">無税になりやすい</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>いずれの場合も、関税とは別に輸入消費税（10%）は発生します。また上記はあくまで実務上の傾向であり、税関の最終判断によって変わる点はご留意ください。</p>
+            </section>
+
+        </div>
+
+        <div class="disclaimer">
+            <p>本記事の内容は管理人の経験および調査に基づく私見であり、特定の税務処理や関税分類を保証するものではありません。実際の輸入に際しては、税関や通関業者にご確認いただくことをおすすめします。</p>
+        </div>
+    </article>
+
+    <a class="back-btn" href="../blog.html">← お役立ち記事一覧に戻る</a>
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-logo">
+            <p class="footer-logo-name">Grading Pulse <span style="color:#e94560;">ぐれぱる！</span></p>
+            <p class="footer-logo-sub">eBayのPSA鑑定ポケカをまとめて見やすく。</p>
+        </div>
+        <nav class="footer-links" aria-label="フッターナビゲーション">
+            <a href="../privacy.html">プライバシーポリシー・免責事項</a>
+            <a href="../contact.html">お問い合わせ</a>
+            <a href="../sitemap.html">サイトマップ</a>
+        </nav>
+        <p class="footer-affiliate">
+            ※本サイトはeBay Partner Networkに参加しており、紹介料を受け取る場合があります。<br>
+            ※掲載情報は取得時点のものであり、最新情報はeBay公式サイトをご確認ください。
+        </p>
+        <p class="footer-copy">© 2026 Grading Pulse All Rights Reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
