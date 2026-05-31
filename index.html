@@ -212,31 +212,41 @@
             <p style="font-size:0.72em;font-weight:700;letter-spacing:3px;color:#e94560;text-transform:uppercase;margin-bottom:8px;">Knowledge Base</p>
             <h2 id="article-section-title" style="font-size:1.2em;font-weight:bold;color:#1c1c1e;">お役立ち記事</h2>
         </div>
-        <a href="blog.html" style="font-size:0.85em;color:#e94560;text-decoration:none;font-weight:bold;">すべて見る →</a>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;">
-        <a href="articles/article01.html" style="display:block;background:#fff;border:1px solid #eee;border-radius:10px;padding:20px;text-decoration:none;transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
-            <p style="font-size:0.68em;font-weight:700;letter-spacing:2px;color:#e94560;text-transform:uppercase;margin-bottom:8px;">eBay基礎知識</p>
-            <p style="font-size:0.92em;font-weight:700;color:#1c1c1e;line-height:1.5;margin-bottom:8px;">怪しい出品者の見分け方｜評価99%でも危険なケースがある</p>
-            <p style="font-size:0.78em;color:#999;">2026.05</p>
-        </a>
-        <a href="articles/article02.html" style="display:block;background:#fff;border:1px solid #eee;border-radius:10px;padding:20px;text-decoration:none;transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
-            <p style="font-size:0.68em;font-weight:700;letter-spacing:2px;color:#e94560;text-transform:uppercase;margin-bottom:8px;">eBay基礎知識</p>
-            <p style="font-size:0.92em;font-weight:700;color:#1c1c1e;line-height:1.5;margin-bottom:8px;">eBayで関税はかかるの？輸入消費税との違いを初心者向けに解説</p>
-            <p style="font-size:0.78em;color:#999;">2026.05</p>
-        </a>
-        <a href="articles/article03.html" style="display:block;background:#fff;border:1px solid #eee;border-radius:10px;padding:20px;text-decoration:none;transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
-            <p style="font-size:0.68em;font-weight:700;letter-spacing:2px;color:#e94560;text-transform:uppercase;margin-bottom:8px;">eBay基礎知識</p>
-            <p style="font-size:0.92em;font-weight:700;color:#1c1c1e;line-height:1.5;margin-bottom:8px;">eBayの決済方法まとめ｜クレカとPayPalどっちがいい？</p>
-            <p style="font-size:0.78em;color:#999;">2026.05</p>
-        </a>
-        <a href="articles/article04.html" style="display:block;background:#fff;border:1px solid #eee;border-radius:10px;padding:20px;text-decoration:none;transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
-            <p style="font-size:0.68em;font-weight:700;letter-spacing:2px;color:#e94560;text-transform:uppercase;margin-bottom:8px;">PSA鑑定</p>
-            <p style="font-size:0.92em;font-weight:700;color:#1c1c1e;line-height:1.5;margin-bottom:8px;">PSA鑑定ポケカを買う際の注意点｜番号確認から個体差まで</p>
-            <p style="font-size:0.78em;color:#999;">2026.05</p>
-        </a>
+    <div id="article-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;"></div>
+    <div style="text-align:center;margin-top:28px;">
+        <a href="blog.html" style="display:inline-block;padding:12px 36px;border:2px solid #e94560;border-radius:30px;color:#e94560;font-size:0.88em;font-weight:700;text-decoration:none;transition:all 0.2s;" onmouseover="this.style.background='#e94560';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='#e94560'">もっと見る →</a>
     </div>
 </section>
+
+<script>
+    // ★新記事追加時はここの先頭に1行追加するだけでOK（新しい順）
+    var articles = [
+        { url: 'articles/article09.html', category: 'eBay基礎知識', title: 'eBayアカウントの作り方【スマホ・ブラウザ版】', date: '2026.05' },
+        { url: 'articles/article08.html', category: 'PSA・鑑定市場', title: 'PSAがバリュープランを停止・2億ドル投資を発表｜PSA鑑定品市場はどう変わるか', date: '2026.05' },
+        { url: 'articles/article07.html', category: '関税・輸入', title: 'ポケカのHSコードの決まる基準は？BOX購入とシングル購入で関税が変わる可能性について', date: '2026.05' },
+        { url: 'articles/article06.html', category: '関税・輸入', title: 'ポケカの関税は絶対0％なの？HSコードと税率の仕組みを解説', date: '2026.05' },
+        { url: 'articles/article05.html', category: 'ポケモン知識', title: '人気ポケモンは日本と海外でこんなに違う｜カード価格にも影響する人気の差', date: '2026.05' },
+        { url: 'articles/article04.html', category: 'PSA鑑定', title: 'PSA鑑定ポケカを買う際の注意点｜番号確認から個体差まで', date: '2026.05' },
+        { url: 'articles/article03.html', category: 'eBay基礎知識', title: 'eBayの決済方法まとめ｜クレカとPayPalどっちがいい？', date: '2026.05' },
+        { url: 'articles/article02.html', category: 'eBay基礎知識', title: 'eBayで関税はかかるの？輸入消費税との違いを初心者向けに解説', date: '2026.05' },
+        { url: 'articles/article01.html', category: 'eBay基礎知識', title: '怪しい出品者の見分け方｜評価99%でも危険なケースがある', date: '2026.05' },
+    ];
+
+    var grid = document.getElementById('article-grid');
+    articles.slice(0, 8).forEach(function(a) {
+        var el = document.createElement('a');
+        el.href = a.url;
+        el.style.cssText = 'display:block;background:#fff;border:1px solid #eee;border-radius:10px;padding:20px;text-decoration:none;transition:box-shadow 0.2s;';
+        el.onmouseover = function(){ this.style.boxShadow = '0 4px 16px rgba(0,0,0,0.08)'; };
+        el.onmouseout  = function(){ this.style.boxShadow = 'none'; };
+        el.innerHTML =
+            '<p style="font-size:0.68em;font-weight:700;letter-spacing:2px;color:#e94560;text-transform:uppercase;margin-bottom:8px;">' + a.category + '</p>' +
+            '<p style="font-size:0.92em;font-weight:700;color:#1c1c1e;line-height:1.5;margin-bottom:8px;">' + a.title + '</p>' +
+            '<p style="font-size:0.78em;color:#999;">' + a.date + '</p>';
+        grid.appendChild(el);
+    });
+</script>
 
 <footer>
     <div class="footer-inner">
