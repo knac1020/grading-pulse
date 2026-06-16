@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="apple-touch-icon" href="../favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポケカ界隈にも潜む「パンプ&ダンプ」——SNSの煽り情報に騙されないために | Grading Pulse</title>
+    <meta name="description" content="株式市場のパンプ&ダンプがポケカ界隈でも起きている？煽り情報の見分け方・騙されないための心構えを解説。「100枚買った」「海外で爆上がり」に要注意。">
+    <link rel="canonical" href="https://gureparu.com/articles/article20.html">
+    <meta property="og:title" content="ポケカ界隈にも潜む「パンプ&ダンプ」——SNSの煽り情報に騙されないために | Grading Pulse">
+    <meta property="og:description" content="株式市場のパンプ&ダンプがポケカ界隈でも起きている？煽り情報の見分け方・騙されないための心構えを解説。">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://gureparu.com/ogp.png">
+    <meta property="og:site_name" content="Grading Pulse（ぐれぱる）">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SD0DS71QS3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SD0DS71QS3');
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif; background: #f8f8f8; color: #1c1c1e; }
+
+        header { background: #fff; border-bottom: 1px solid #e0e0e0; position: sticky; top: 0; z-index: 100; }
+        .header-inner { max-width: 1400px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; height: 56px; gap: 16px; }
+        .logo-wrap { display: flex; flex-direction: column; flex: 1; text-decoration: none; }
+        .logo-sub { font-size: 0.62em; color: #555; white-space: nowrap; margin-left: 2px; margin-top: 1px; }
+        .header-search { display: flex; align-items: center; border: 1px solid #ddd; border-radius: 25px; overflow: hidden; background: #f5f5f5; max-width: 220px; }
+        .header-search input { border: none; background: transparent; padding: 7px 12px; font-size: 0.85em; outline: none; width: 100%; color: #1c1c1e; }
+        .header-search input::placeholder { color: #888; }
+        .header-search button { border: none; background: none; color: #888; padding: 7px 10px; cursor: pointer; }
+        @media (max-width: 768px) { .header-search { max-width: 140px; } }
+
+        .article-container { max-width: 760px; margin: 0 auto; padding: 0 20px 80px; }
+
+        .breadcrumb { font-size: 0.8em; color: #888; padding: 20px 0 0; margin-bottom: 32px; }
+        .breadcrumb a { color: #e94560; text-decoration: none; }
+
+        .article-header { margin-bottom: 40px; }
+        .article-category {
+            font-size: 0.68em; font-weight: 700; letter-spacing: 2px; color: #e94560;
+            text-transform: uppercase; margin-bottom: 16px;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .article-category::before { content: ''; display: block; width: 20px; height: 2px; background: #e94560; }
+        .article-title { font-size: clamp(1.4em, 4vw, 2em); font-weight: 700; line-height: 1.4; color: #1c1c1e; margin-bottom: 16px; }
+        .article-meta { font-size: 0.78em; color: #bbb; }
+
+        .article-body { line-height: 1.9; font-size: 0.97em; }
+        .article-body p { margin-bottom: 1.4em; }
+        .article-body h2 {
+            font-size: 1.15em; font-weight: 700; color: #1c1c1e;
+            margin: 2.5em 0 1em; padding: 0.6em 1em;
+            border-left: 3px solid #e94560; background: #fff;
+        }
+
+        .flow-box { background: #f5f5f5; border-radius: 8px; padding: 1.2em 1.4em; margin: 1.2rem 0; }
+        .flow-step { display: flex; gap: 14px; padding: 8px 0; border-bottom: 1px solid #e0e0e0; align-items: flex-start; }
+        .flow-step:last-child { border-bottom: none; }
+        .flow-num { background: #e94560; color: #fff; border-radius: 50%; width: 26px; height: 26px; display: flex; align-items: center; justify-content: center; font-size: 0.82em; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+        .flow-title { font-weight: 700; margin-bottom: 2px; font-size: 0.92em; }
+        .flow-desc { color: #888; font-size: 0.82em; }
+
+        .case-box {
+            background: #f5f0ff; border-left: 3px solid #7c3aed;
+            border-radius: 0 6px 6px 0; padding: 1.2em 1.4em; margin: 1rem 0;
+        }
+        .case-label { font-size: 0.68em; font-weight: 700; letter-spacing: 2px; color: #7c3aed; text-transform: uppercase; margin-bottom: 8px; }
+
+        .pokeca-box {
+            background: #f5f5f5; border-left: 3px solid #e94560;
+            border-radius: 0 6px 6px 0; padding: 1.2em 1.4em; margin: 1rem 0;
+        }
+        .pokeca-label { font-size: 0.68em; font-weight: 700; letter-spacing: 2px; color: #e94560; text-transform: uppercase; margin-bottom: 8px; }
+        .pokeca-list { list-style: none; padding: 0; font-size: 0.9em; line-height: 2; }
+        .pokeca-list li { border-bottom: 1px solid #e0e0e0; padding: 4px 0; }
+        .pokeca-list li:last-child { border-bottom: none; }
+
+        .quote-box {
+            background: #f5f5f5; border-radius: 8px;
+            padding: 1.2em 1.6em; margin: 1.5rem 0;
+            font-style: italic; font-size: 0.95em; line-height: 1.9; color: #555;
+        }
+        .quote-box cite { font-style: normal; font-size: 0.82em; color: #888; display: block; margin-top: 8px; }
+
+        .check-list {
+            list-style: none; padding: 1.2em 1.4em;
+            background: #fff8f8; border-radius: 8px; margin: 1rem 0;
+        }
+        .check-list li { font-size: 0.9em; padding: 5px 0; border-bottom: 1px solid #ffe0e0; display: flex; gap: 10px; line-height: 1.7; color: #444; }
+        .check-list li:last-child { border-bottom: none; }
+        .check-mark { color: #e94560; flex-shrink: 0; }
+
+        .protect-list {
+            list-style: none; padding: 1.2em 1.4em;
+            background: #f0fdf4; border-left: 3px solid #22c55e;
+            border-radius: 0 6px 6px 0; margin: 1rem 0;
+        }
+        .protect-list li { font-size: 0.9em; padding: 5px 0; border-bottom: 1px solid #d1fae5; display: flex; gap: 10px; line-height: 1.7; }
+        .protect-list li:last-child { border-bottom: none; }
+        .protect-mark { color: #22c55e; font-weight: 700; flex-shrink: 0; }
+
+        .conclusion-box {
+            background: #1c1c1e; border-radius: 8px; padding: 1.5em 1.8em;
+            margin-top: 3em; color: #aaa; font-size: 0.9em; line-height: 1.8;
+        }
+        .conclusion-box strong { color: #fff; display: block; margin-bottom: 0.4em; font-size: 1.05em; }
+
+        .share-area { margin: 2.5em 0; text-align: center; }
+        .share-area p { font-size: 0.8em; color: #aaa; margin-bottom: 12px; letter-spacing: 2px; text-transform: uppercase; }
+        .share-btns { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+        .share-btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 20px; border-radius: 25px; font-size: 0.82em; font-weight: 700; text-decoration: none; color: #fff; transition: opacity 0.2s; }
+        .share-btn:hover { opacity: 0.85; }
+        .share-btn.x { background: #000; }
+        .share-btn.line { background: #06C755; }
+
+        .back-link { display: inline-block; margin: 2em 0 0; font-size: 0.85em; color: #e94560; text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+
+        footer { background: #1c1c1e; color: #aaa; padding: 40px 20px 20px; }
+        .footer-inner { max-width: 1200px; margin: 0 auto; }
+        .footer-logo { text-align: center; margin-bottom: 30px; }
+        .footer-logo-name { font-size: 1.3em; font-weight: bold; color: #fff; margin-bottom: 8px; }
+        .footer-logo-sub { font-size: 0.85em; color: #aaa; }
+        .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-bottom: 30px; font-size: 0.85em; }
+        .footer-links a { color: #aaa; text-decoration: none; transition: color 0.2s; }
+        .footer-links a:hover { color: #fff; }
+        .footer-affiliate { text-align: center; font-size: 0.75em; color: #666; margin-bottom: 20px; line-height: 1.8; }
+        .footer-copy { text-align: center; font-size: 0.75em; color: #333; padding-top: 20px; }
+    </style>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6412613459204783" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <a class="logo-wrap" href="../index.html" aria-label="Grading Pulse トップページへ">
+            <img src="../logo.png" alt="Grading Pulse（ぐれぱる）" style="height:36px;width:auto;max-width:160px;object-fit:contain;">
+            <span class="logo-sub">eBay PSAポケカ出品まとめ</span>
+        </a>
+        <div class="header-search" role="search">
+            <input type="search" placeholder="カード名で検索" aria-label="カードを検索" onkeypress="if(event.key==='Enter'){location.href='../list.html?q='+encodeURIComponent(this.value);}">
+            <button onclick="location.href='../list.html?q='+encodeURIComponent(this.previousElementSibling.value)" aria-label="検索する">🔍</button>
+        </div>
+    </div>
+</header>
+
+<div class="article-container">
+
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+        <a href="../index.html">TOP</a> &gt; <a href="../blog.html">お役立ち記事</a> &gt; ポケカ界隈のパンプ&ダンプ
+    </nav>
+
+    <header class="article-header">
+        <p class="article-category">ポケモンカード知識</p>
+        <h1 class="article-title">ポケカ界隈にも潜む「パンプ&ダンプ」——SNSの煽り情報に騙されないために</h1>
+        <p class="article-meta">公開日：2026年6月14日</p>
+    </header>
+
+    <article class="article-body">
+
+        <p>株式市場や暗号資産の世界でよく知られる「パンプ&ダンプ」という手口。実はポケカ界隈でも似たような動きを目にすることがあります。この記事ではパンプ&ダンプの基本的な仕組みと、トレカ市場での具体的なパターン、そして騙されないための見分け方を解説します。</p>
+
+        <h2>パンプ&ダンプとは何か</h2>
+        <p>パンプ&ダンプとは、ある資産の価格を人為的に吊り上げ（Pump）、高値になったところで仕掛けた側が売り抜ける（Dump）ことで利益を得る行為です。株式市場では相場操縦として多くの国で違法とされています。</p>
+
+        <div class="flow-box">
+            <div class="flow-step">
+                <span class="flow-num">1</span>
+                <div><p class="flow-title">安いうちに大量に買い集める</p><p class="flow-desc">株・暗号資産・トレカなどを事前に仕込む</p></div>
+            </div>
+            <div class="flow-step">
+                <span class="flow-num">2</span>
+                <div><p class="flow-title">SNSで買い煽りを行う</p><p class="flow-desc">「絶対上がる！」「今のうちに買え！」と情報を拡散する</p></div>
+            </div>
+            <div class="flow-step">
+                <span class="flow-num">3</span>
+                <div><p class="flow-title">一般の人が買い始める</p><p class="flow-desc">需要が急増し、価格が急騰する</p></div>
+            </div>
+            <div class="flow-step">
+                <span class="flow-num">4</span>
+                <div><p class="flow-title">仕掛け人が高値で売り抜ける</p><p class="flow-desc">利益を確定させる</p></div>
+            </div>
+            <div class="flow-step">
+                <span class="flow-num">5</span>
+                <div><p class="flow-title">価格が暴落する</p><p class="flow-desc">後から買った人が損失を被る</p></div>
+            </div>
+        </div>
+
+        <h2>実際に摘発された事例もある</h2>
+        <p>「SNSでの煽り程度では捕まらない」と思われがちですが、海外では実際にインフルエンサーやトレーダーグループが組織的なパンプ&ダンプとして摘発された事例が複数存在します。</p>
+
+        <div class="case-box">
+            <p class="case-label">摘発のパターン</p>
+            <p style="font-size: 0.9em; line-height: 1.9; margin: 0;">SNSで大量のフォロワーを持つインフルエンサーやトレーダーグループが、特定の銘柄を推奨してフォロワーに買わせ、自分たちは裏で売り抜けていたとして当局に訴追されたケースがあります。摘発の決定打になるのは「絶対上がる」という発言だけでなく、「先に仕込んで売り抜けようぜ」といった内部のやり取りや売買履歴が証拠として出てきた場合です。逆に言えば、単独の煽り投稿だけでは立証が難しく、グレーゾーンのまま野放しになっているケースも多いと言われています。</p>
+        </div>
+
+        <h2>ポケカ界隈でよく見られるパターン</h2>
+        <p>ポケカ市場は株式市場ほど規制されていないため、より見分けにくい形で似たような動きが起きることがあります。</p>
+
+        <div class="pokeca-box">
+            <p class="pokeca-label">よく見られる煽り文句</p>
+            <ul class="pokeca-list">
+                <li>「このカード100枚買った！」</li>
+                <li>「海外で爆上がりしてる」</li>
+                <li>「今のうちに回収しないと手遅れ」</li>
+                <li>「ショップから在庫が消えてる！」</li>
+                <li>「絶対再評価される」「もう遅い」</li>
+            </ul>
+        </div>
+
+        <p>重要なのは「本当に価値があると思って発信している人」と「先に仕込んで売り抜けを狙っている人」の区別が外から見えにくい点です。また、ポケカ市場は流動性が低いカードも多く、少人数でも相場サイトの表示価格に影響を与えやすいという特性があります。</p>
+
+        <h2>「本当に上がると思うなら黙って買えばいい」</h2>
+        <p>これがパンプ&ダンプを見抜く一番シンプルな視点です。もし本当に「まだ市場が気づいていない価値」を見つけたなら、わざわざ大声で教えるインセンティブはほぼありません。自分が買う前に教えれば価格が上がってしまうし、欲しい枚数を集めにくくなります。</p>
+
+        <div class="quote-box">
+            「もし誰かが『簡単に儲かる方法』を教えてくれるなら、その人はたいてい『その方法そのもの』ではなく『あなた』から儲けようとしている。」
+            <cite>— 投資の世界の格言</cite>
+        </div>
+
+        <h2>騙されないための見分け方</h2>
+        <ul class="check-list">
+            <li><span class="check-mark">⚠</span>「絶対上がる」「買わない理由がない」など断定的な表現が多い</li>
+            <li><span class="check-mark">⚠</span>根拠が曖昧（「海外で話題」「関係者情報」など出所不明）</li>
+            <li><span class="check-mark">⚠</span>急に大勢が同じカードを推し始める</li>
+            <li><span class="check-mark">⚠</span>過去には全く話題になっていなかったカード</li>
+            <li><span class="check-mark">⚠</span>FOMO（取り残される恐怖）を煽る表現が多い</li>
+            <li><span class="check-mark">⚠</span>発信者が既に大量保有していることをアピールしている</li>
+        </ul>
+
+        <h2>長く楽しむための心構え</h2>
+        <ul class="protect-list">
+            <li><span class="protect-mark">✓</span>「なぜそのカードが評価されるのか」根拠を自分で考える</li>
+            <li><span class="protect-mark">✓</span>プレイ需要・人気キャラ・イラスト・希少性など客観的な要素を確認する</li>
+            <li><span class="protect-mark">✓</span>「何を買うか」より「誰が、どんな立場でその情報を発信しているか」を見る</li>
+            <li><span class="protect-mark">✓</span>短期的な「爆上がり確定！」ほど冷静に距離を置く</li>
+            <li><span class="protect-mark">✓</span>本当に価値があるカードはSNSで煽られなくても数年かけてじわじわ評価される</li>
+        </ul>
+
+        <div class="conclusion-box">
+            <strong>まとめ</strong>
+            パンプ&ダンプは株式市場だけの話ではなく、ポケカ界隈でも似たような動きは存在します。ただしすべての発信が悪意あるものではなく、本当に好きで発信している人も多いです。大切なのは「誰が、なぜ、何のためにその情報を発信しているのか」を冷静に考える習慣を持つことです。長くコレクションを楽しんでいる人ほど、他人の煽りより自分の目と判断軸を信じています。
+        </div>
+
+        <div class="share-area">
+            <p>Share</p>
+            <div class="share-btns">
+                <a class="share-btn x" href="https://twitter.com/intent/tweet?url=https://gureparu.com/articles/article20.html&text=ポケカ界隈にも潜む「パンプ&ダンプ」——SNSの煽り情報に騙されないために" target="_blank" rel="noopener noreferrer">𝕏 でシェア</a>
+                <a class="share-btn line" href="https://line.me/R/msg/text/?https://gureparu.com/articles/article20.html" target="_blank" rel="noopener noreferrer">LINE でシェア</a>
+            </div>
+        </div>
+
+        <a class="back-link" href="../blog.html">← お役立ち記事一覧に戻る</a>
+
+    </article>
+</div>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-logo">
+            <p class="footer-logo-name">Grading Pulse <span style="color:#e94560;">ぐれぱる！</span></p>
+            <p class="footer-logo-sub">eBayのPSA鑑定ポケカをまとめて見やすく。</p>
+        </div>
+        <nav class="footer-links" aria-label="フッターナビゲーション">
+            <a href="../privacy.html">プライバシーポリシー・免責事項</a>
+            <a href="../contact.html">お問い合わせ</a>
+            <a href="../sitemap.html">サイトマップ</a>
+        </nav>
+        <p class="footer-affiliate">
+            ※ポケモン・ポケモンカードゲームに関する著作権・商標権その他の知的財産権は、株式会社ポケモン・任天堂・クリーチャーズ・ゲームフリークに帰属します。<br>
+            ※本サイトはeBay Partner Networkに参加しており、紹介料を受け取る場合があります。<br>
+            ※掲載情報は取得時点のものであり、最新情報はeBay公式サイトをご確認ください。
+        </p>
+        <p class="footer-copy">© 2026 Grading Pulse All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
