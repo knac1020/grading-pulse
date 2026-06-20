@@ -22,8 +22,9 @@
       gtag('config', 'G-SD0DS71QS3');
     </script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: #f8f8f8; color: #1c1c1e; }
+        body { font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif; background: #f8f8f8; color: #1c1c1e; }
         header { background: #fff; border-bottom: 1px solid #e0e0e0; position: sticky; top: 0; z-index: 100; }
         .header-inner { max-width: 1400px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; height: 56px; gap: 16px; }
         .logo-wrap { display: flex; flex-direction: column; flex: 1; text-decoration: none; }
@@ -94,7 +95,7 @@
     <div class="header-inner">
         <a class="logo-wrap" href="../index.html" aria-label="Grading Pulse トップページへ">
             <img src="../logo.png" alt="Grading Pulse（ぐれぱる）" style="height:40px;width:auto;max-width:180px;object-fit:contain;">
-            <span class="logo-sub">eBay PSAポケカ出品まとめ</span>
+            <span class="logo-sub">ポケカ＆トレカ市場を、もっと深く。</span>
         </a>
         <div class="header-search" role="search">
             <input type="search" placeholder="カード名で検索" aria-label="カードを検索" onkeypress="if(event.key==='Enter'){location.href='../list.html?q='+encodeURIComponent(this.value);}">
@@ -137,7 +138,33 @@
                 <h2>eBay Managed Paymentsとは</h2>
                 <p>現在のeBayは「eBay Managed Payments」というeBay公式の決済システムに完全移行しています。これは購入者とセラーの間にeBayが入る仕組みで、昔のように「セラーへ直接PayPal送金」という形式ではなくなりました。</p>
                 <p>購入者はeBayに支払い、eBayがセラーへ送金する流れになっているため、万が一トラブルが発生した場合にeBayが間に介入しやすくなっています。以前と比べて購入者にとってより安全な仕組みになったと言えます。</p>
-            </section>
+
+                <div style="margin:1.2em 0 1.8em;overflow-x:auto;">
+                <svg width="100%" viewBox="0 0 680 170" role="img" xmlns="http://www.w3.org/2000/svg">
+                  <title>eBay Managed Paymentsの仕組み</title>
+                  <desc>購入者がeBayに支払い、eBayがセラーに送金する流れを示したフロー図</desc>
+                  <defs>
+                    <marker id="arrp" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+                    <marker id="arrg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#888780" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+                  </defs>
+                  <text x="340" y="22" text-anchor="middle" font-size="12" fill="#888" font-family="'Noto Sans JP',sans-serif">eBay Managed Payments ── eBayが間に入る安全な仕組み</text>
+                  <rect x="20" y="44" width="140" height="72" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+                  <text x="90" y="72" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="700" fill="#085041" font-family="'Noto Sans JP',sans-serif">購入者（あなた）</text>
+                  <text x="90" y="92" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#0F6E56" font-family="'Noto Sans JP',sans-serif">クレカ・PayPalで支払い</text>
+                  <line x1="160" y1="80" x2="218" y2="80" stroke="#0F6E56" stroke-width="1.5" marker-end="url(#arrp)"/>
+                  <text x="189" y="70" text-anchor="middle" font-size="10" fill="#0F6E56" font-family="'Noto Sans JP',sans-serif">支払い</text>
+                  <rect x="220" y="34" width="240" height="92" rx="10" fill="#FAECE7" stroke="#D85A30" stroke-width="1.5"/>
+                  <text x="340" y="68" text-anchor="middle" dominant-baseline="central" font-size="15" font-weight="700" fill="#4A1B0C" font-family="'Noto Sans JP',sans-serif">eBay</text>
+                  <text x="340" y="90" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#993C1D" font-family="'Noto Sans JP',sans-serif">間に入ってトラブル対応・保証</text>
+                  <text x="340" y="108" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#993C1D" font-family="'Noto Sans JP',sans-serif">Money Back Guarantee が適用</text>
+                  <line x1="460" y1="80" x2="518" y2="80" stroke="#888780" stroke-width="1.5" marker-end="url(#arrg)"/>
+                  <text x="489" y="70" text-anchor="middle" font-size="10" fill="#888" font-family="'Noto Sans JP',sans-serif">送金</text>
+                  <rect x="520" y="44" width="140" height="72" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+                  <text x="590" y="72" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="700" fill="#2C2C2A" font-family="'Noto Sans JP',sans-serif">セラー（出品者）</text>
+                  <text x="590" y="92" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#5F5E5A" font-family="'Noto Sans JP',sans-serif">eBayから受け取る</text>
+                  <text x="340" y="148" text-anchor="middle" font-size="11" fill="#e94560" font-family="'Noto Sans JP',sans-serif">eBay外への送金誘導（PayPal F&amp;F・銀行振込など）は詐欺の可能性が高く、保証対象外になるので絶対NG</text>
+                </svg>
+                </div>
 
             <section id="methods">
                 <h2>使える決済方法一覧</h2>
@@ -159,15 +186,48 @@
                 <h2>クレカvsPayPal：何が違うの？</h2>
                 <p>どちらもeBay Managed Payments上で使えますが、トラブル時のサポート面で大きな違いがあります。</p>
 
-                <div class="compare-box">
-                    <p class="compare-title">クレカ vs PayPal 比較</p>
-                    <table>
-                        <tr><th></th><th>クレカ</th><th>PayPal</th></tr>
-                        <tr><td>為替コスト</td><td class="good">有利なことが多い</td><td class="bad">やや不利なことが多い</td></tr>
-                        <tr><td>トラブル時のサポート</td><td>カード会社次第</td><td class="good">日本語サポートあり・対応が早い</td></tr>
-                        <tr><td>安心感</td><td>カード次第</td><td class="good">高め</td></tr>
-                        <tr><td>手続きのしやすさ</td><td>普通</td><td class="good">慣れれば使いやすい</td></tr>
-                    </table>
+                <div style="margin:1.2em 0 1.8em;overflow-x:auto;">
+                <svg width="100%" viewBox="0 0 680 260" role="img" xmlns="http://www.w3.org/2000/svg">
+                  <title>クレカとPayPalの比較</title>
+                  <desc>クレカとPayPalをそれぞれ4項目で比較したカード図</desc>
+                  <text x="340" y="24" text-anchor="middle" font-size="12" fill="#888" font-family="'Noto Sans JP',sans-serif">クレカ vs PayPal ── どちらにも強みがある</text>
+                  <rect x="20" y="40" width="300" height="204" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+                  <rect x="20" y="40" width="300" height="44" rx="10" fill="#185FA5"/>
+                  <rect x="20" y="64" width="300" height="20" fill="#185FA5"/>
+                  <text x="170" y="68" text-anchor="middle" dominant-baseline="central" font-size="15" font-weight="700" fill="#fff" font-family="'Noto Sans JP',sans-serif">クレジットカード</text>
+                  <line x1="40" y1="110" x2="300" y2="110" stroke="#B5D4F4" stroke-width="0.5"/>
+                  <line x1="40" y1="138" x2="300" y2="138" stroke="#B5D4F4" stroke-width="0.5"/>
+                  <line x1="40" y1="174" x2="300" y2="174" stroke="#B5D4F4" stroke-width="0.5"/>
+                  <text x="50" y="95" dominant-baseline="central" font-size="11" fill="#185FA5" font-family="'Noto Sans JP',sans-serif">為替コスト</text>
+                  <text x="300" y="95" text-anchor="end" dominant-baseline="central" font-size="12" font-weight="700" fill="#0C447C" font-family="'Noto Sans JP',sans-serif">有利なことが多い</text>
+                  <text x="50" y="124" dominant-baseline="central" font-size="11" fill="#185FA5" font-family="'Noto Sans JP',sans-serif">トラブルサポート</text>
+                  <text x="300" y="124" text-anchor="end" dominant-baseline="central" font-size="12" font-weight="700" fill="#0C447C" font-family="'Noto Sans JP',sans-serif">カード会社次第</text>
+                  <text x="50" y="152" dominant-baseline="central" font-size="11" fill="#185FA5" font-family="'Noto Sans JP',sans-serif">日本語サポート</text>
+                  <text x="300" y="152" text-anchor="end" dominant-baseline="central" font-size="12" font-weight="700" fill="#0C447C" font-family="'Noto Sans JP',sans-serif">カード次第</text>
+                  <text x="50" y="183" dominant-baseline="central" font-size="11" fill="#185FA5" font-family="'Noto Sans JP',sans-serif">こんな人に</text>
+                  <text x="300" y="176" text-anchor="end" dominant-baseline="central" font-size="11" fill="#0C447C" font-family="'Noto Sans JP',sans-serif">手厚いサポートのカード保有者</text>
+                  <text x="300" y="192" text-anchor="end" dominant-baseline="central" font-size="11" fill="#0C447C" font-family="'Noto Sans JP',sans-serif">高額カードを頻繁に買う人</text>
+                  <rect x="40" y="214" width="260" height="18" rx="4" fill="#B5D4F4"/>
+                  <text x="170" y="223" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="700" fill="#042C53" font-family="'Noto Sans JP',sans-serif">為替コストが低く、高額カード購入に有利</text>
+                  <rect x="360" y="40" width="300" height="204" rx="10" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+                  <rect x="360" y="40" width="300" height="44" rx="10" fill="#3B6D11"/>
+                  <rect x="360" y="64" width="300" height="20" fill="#3B6D11"/>
+                  <text x="510" y="68" text-anchor="middle" dominant-baseline="central" font-size="15" font-weight="700" fill="#fff" font-family="'Noto Sans JP',sans-serif">PayPal</text>
+                  <line x1="380" y1="110" x2="640" y2="110" stroke="#C0DD97" stroke-width="0.5"/>
+                  <line x1="380" y1="138" x2="640" y2="138" stroke="#C0DD97" stroke-width="0.5"/>
+                  <line x1="380" y1="174" x2="640" y2="174" stroke="#C0DD97" stroke-width="0.5"/>
+                  <text x="390" y="95" dominant-baseline="central" font-size="11" fill="#3B6D11" font-family="'Noto Sans JP',sans-serif">為替コスト</text>
+                  <text x="640" y="95" text-anchor="end" dominant-baseline="central" font-size="12" font-weight="700" fill="#27500A" font-family="'Noto Sans JP',sans-serif">やや不利（3〜4%前後）</text>
+                  <text x="390" y="124" dominant-baseline="central" font-size="11" fill="#3B6D11" font-family="'Noto Sans JP',sans-serif">トラブルサポート</text>
+                  <text x="640" y="124" text-anchor="end" dominant-baseline="central" font-size="12" font-weight="700" fill="#27500A" font-family="'Noto Sans JP',sans-serif">対応が早く安心</text>
+                  <text x="390" y="152" dominant-baseline="central" font-size="11" fill="#3B6D11" font-family="'Noto Sans JP',sans-serif">日本語サポート</text>
+                  <text x="640" y="152" text-anchor="end" dominant-baseline="central" font-size="12" font-weight="700" fill="#27500A" font-family="'Noto Sans JP',sans-serif">電話サポートあり</text>
+                  <text x="390" y="183" dominant-baseline="central" font-size="11" fill="#3B6D11" font-family="'Noto Sans JP',sans-serif">こんな人に</text>
+                  <text x="640" y="176" text-anchor="end" dominant-baseline="central" font-size="11" fill="#27500A" font-family="'Noto Sans JP',sans-serif">クレカのサポートに不安がある人</text>
+                  <text x="640" y="192" text-anchor="end" dominant-baseline="central" font-size="11" fill="#27500A" font-family="'Noto Sans JP',sans-serif">安心・サポート重視の人</text>
+                  <rect x="380" y="214" width="260" height="18" rx="4" fill="#C0DD97"/>
+                  <text x="510" y="223" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="700" fill="#173404" font-family="'Noto Sans JP',sans-serif">日本語サポートが手厚く、初心者に安心</text>
+                </svg>
                 </div>
 
                 <h3>クレカが向いている人</h3>
@@ -237,7 +297,7 @@
     <div class="footer-inner">
         <div class="footer-logo">
             <p class="footer-logo-name">Grading Pulse <span style="color:#e94560;">ぐれぱる！</span></p>
-            <p class="footer-logo-sub">eBayのPSA鑑定ポケカをまとめて見やすく。</p>
+            <p class="footer-logo-sub">ポケカ＆トレカ市場を、もっと深く。</p>
         </div>
         <nav class="footer-links" aria-label="フッターナビゲーション">
             <a href="../privacy.html">プライバシーポリシー・免責事項</a>

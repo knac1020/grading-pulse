@@ -140,7 +140,7 @@
     <div class="header-inner">
         <a class="logo-wrap" href="../index.html" aria-label="Grading Pulse トップページへ">
             <img src="../logo.png" alt="Grading Pulse（ぐれぱる）" style="height:36px;width:auto;max-width:160px;object-fit:contain;">
-            <span class="logo-sub">eBay PSAポケカ出品まとめ</span>
+            <span class="logo-sub">ポケカ＆トレカ市場を、もっと深く。</span>
         </a>
         <div class="header-search" role="search">
             <input type="search" placeholder="カード名で検索" aria-label="カードを検索" onkeypress="if(event.key==='Enter'){location.href='../list.html?q='+encodeURIComponent(this.value);}">
@@ -176,6 +176,42 @@
             <p class="reason-num">Reason 01</p>
             <p class="reason-title">生産ラインには限界がある</p>
             <p class="reason-body">カードは印刷して終わりではありません。印刷・裁断・加工・パック詰め・箱詰め・配送まで全工程が必要です。予想10万個の商品に50万件の受注が来ても、生産ラインを5倍にすることはできません。設備・人員・工場のキャパはすぐには変えられないのです。</p>
+        </div>
+
+        <div style="margin:1.2em 0 1.8em;overflow-x:auto;">
+        <svg width="100%" viewBox="0 0 680 200" role="img" xmlns="http://www.w3.org/2000/svg">
+          <title>ポケカの生産工程フロー図</title>
+          <desc>印刷から配送まで6つの工程が矢印でつながれたフロー図。</desc>
+          <defs>
+            <marker id="arr1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M2 1L8 5L2 9" fill="none" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </marker>
+          </defs>
+          <rect x="20" y="72" width="82" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+          <text x="61" y="97" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#085041" font-family="'Noto Sans JP',sans-serif">印刷</text>
+          <text x="61" y="115" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56" font-family="'Noto Sans JP',sans-serif">版・インク</text>
+          <line x1="102" y1="100" x2="118" y2="100" stroke="#0F6E56" stroke-width="1.5" marker-end="url(#arr1)"/>
+          <rect x="120" y="72" width="82" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+          <text x="161" y="97" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#085041" font-family="'Noto Sans JP',sans-serif">裁断</text>
+          <text x="161" y="115" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56" font-family="'Noto Sans JP',sans-serif">サイズ整形</text>
+          <line x1="202" y1="100" x2="218" y2="100" stroke="#0F6E56" stroke-width="1.5" marker-end="url(#arr1)"/>
+          <rect x="220" y="72" width="82" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+          <text x="261" y="97" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#085041" font-family="'Noto Sans JP',sans-serif">加工</text>
+          <text x="261" y="115" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56" font-family="'Noto Sans JP',sans-serif">コーティング</text>
+          <line x1="302" y1="100" x2="318" y2="100" stroke="#0F6E56" stroke-width="1.5" marker-end="url(#arr1)"/>
+          <rect x="320" y="72" width="82" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+          <text x="361" y="97" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#085041" font-family="'Noto Sans JP',sans-serif">パック詰め</text>
+          <text x="361" y="115" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56" font-family="'Noto Sans JP',sans-serif">封入・封かん</text>
+          <line x1="402" y1="100" x2="418" y2="100" stroke="#0F6E56" stroke-width="1.5" marker-end="url(#arr1)"/>
+          <rect x="420" y="72" width="82" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+          <text x="461" y="97" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#085041" font-family="'Noto Sans JP',sans-serif">箱詰め</text>
+          <text x="461" y="115" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56" font-family="'Noto Sans JP',sans-serif">梱包・検品</text>
+          <line x1="502" y1="100" x2="518" y2="100" stroke="#0F6E56" stroke-width="1.5" marker-end="url(#arr1)"/>
+          <rect x="520" y="72" width="82" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+          <text x="561" y="97" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#4A1B0C" font-family="'Noto Sans JP',sans-serif">配送</text>
+          <text x="561" y="115" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#993C1D" font-family="'Noto Sans JP',sans-serif">店舗・消費者</text>
+          <text x="340" y="168" text-anchor="middle" font-size="12" fill="#666" font-family="'Noto Sans JP',sans-serif">このラインを複数独占することになり当然その間は他の製品は作れない</text>
+        </svg>
         </div>
 
         <div class="reason-card">
@@ -232,6 +268,41 @@
 
         <h2>では実際にどうしているのか</h2>
         <p>メーカーが現実的に取れる選択肢は「受注か通常販売か」の二択ではありません。複数の手法を組み合わせて需要を少しずつ吸収しています。</p>
+
+        <div style="margin:1.2em 0 1.8em;overflow-x:auto;">
+        <svg width="100%" viewBox="0 0 680 220" role="img" xmlns="http://www.w3.org/2000/svg">
+          <title>需要を吸収する4つの手法</title>
+          <desc>通常販売・抽選販売・再販・後日受注の4手法が左から右へ並んだフロー図。</desc>
+          <defs>
+            <marker id="arr2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M2 1L8 5L2 9" fill="none" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </marker>
+          </defs>
+          <text x="340" y="24" text-anchor="middle" font-size="12" fill="#888" font-family="'Noto Sans JP',sans-serif">需要の高い商品に対してメーカーが取る現実的な手法の組み合わせ</text>
+          <rect x="20" y="44" width="138" height="72" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+          <text x="89" y="72" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="700" fill="#085041" font-family="'Noto Sans JP',sans-serif">まず最大生産</text>
+          <text x="89" y="90" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56" font-family="'Noto Sans JP',sans-serif">通常販売</text>
+          <text x="89" y="107" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56" font-family="'Noto Sans JP',sans-serif">作れる限り市場へ</text>
+          <line x1="158" y1="80" x2="174" y2="80" stroke="#0F6E56" stroke-width="1.5" marker-end="url(#arr2)"/>
+          <rect x="176" y="44" width="138" height="72" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+          <text x="245" y="72" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="700" fill="#085041" font-family="'Noto Sans JP',sans-serif">需要過多のとき</text>
+          <text x="245" y="90" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56" font-family="'Noto Sans JP',sans-serif">抽選販売</text>
+          <text x="245" y="107" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56" font-family="'Noto Sans JP',sans-serif">公平性を担保</text>
+          <line x1="314" y1="80" x2="330" y2="80" stroke="#0F6E56" stroke-width="1.5" marker-end="url(#arr2)"/>
+          <rect x="332" y="44" width="138" height="72" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+          <text x="401" y="72" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="700" fill="#085041" font-family="'Noto Sans JP',sans-serif">需要を見ながら</text>
+          <text x="401" y="90" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56" font-family="'Noto Sans JP',sans-serif">再販</text>
+          <text x="401" y="107" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56" font-family="'Noto Sans JP',sans-serif">追加生産で補完</text>
+          <line x1="470" y1="80" x2="486" y2="80" stroke="#0F6E56" stroke-width="1.5" marker-end="url(#arr2)"/>
+          <rect x="488" y="44" width="168" height="72" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+          <text x="572" y="72" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="700" fill="#4A1B0C" font-family="'Noto Sans JP',sans-serif">量が読めたら</text>
+          <text x="572" y="90" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#993C1D" font-family="'Noto Sans JP',sans-serif">後日受注</text>
+          <text x="572" y="107" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#993C1D" font-family="'Noto Sans JP',sans-serif">限定的に受付</text>
+          <rect x="20" y="140" width="636" height="44" rx="8" fill="none" stroke="#e0e0e0" stroke-width="0.5" stroke-dasharray="4 3"/>
+          <text x="340" y="158" text-anchor="middle" font-size="12" fill="#666" font-family="'Noto Sans JP',sans-serif">← これら4手法を組み合わせることで、一度に大量受注するリスクを</text>
+          <text x="340" y="175" text-anchor="middle" font-size="12" fill="#666" font-family="'Noto Sans JP',sans-serif">避けながら、需要を段階的に吸収していく →</text>
+        </svg>
+        </div>
         <ul class="method-list">
             <li>まず最大生産で通常販売（作れるだけ作って市場に流す）</li>
             <li>抽選販売（需要が高い場合に公平性を担保）</li>
@@ -266,7 +337,7 @@
     <div class="footer-inner">
         <div class="footer-logo">
             <p class="footer-logo-name">Grading Pulse <span style="color:#e94560;">ぐれぱる！</span></p>
-            <p class="footer-logo-sub">eBayのPSA鑑定ポケカをまとめて見やすく。</p>
+            <p class="footer-logo-sub">ポケカ＆トレカ市場を、もっと深く。</p>
         </div>
         <nav class="footer-links" aria-label="フッターナビゲーション">
             <a href="../privacy.html">プライバシーポリシー・免責事項</a>

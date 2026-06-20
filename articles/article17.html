@@ -165,7 +165,7 @@
     <div class="header-inner">
         <a class="logo-wrap" href="../index.html" aria-label="Grading Pulse トップページへ">
             <img src="../logo.png" alt="Grading Pulse（ぐれぱる）" style="height:36px;width:auto;max-width:160px;object-fit:contain;">
-            <span class="logo-sub">eBay PSAポケカ出品まとめ</span>
+            <span class="logo-sub">ポケカ＆トレカ市場を、もっと深く。</span>
         </a>
         <div class="header-search" role="search">
             <input type="search" placeholder="カード名で検索" aria-label="カードを検索" onkeypress="if(event.key==='Enter'){location.href='../list.html?q='+encodeURIComponent(this.value);}">
@@ -204,23 +204,36 @@
         <h2>今のPSAを飛行機で例えると</h2>
         <p>現在のPSAの状況は、飛行機の座席販売に例えるとわかりやすいです。</p>
 
-        <div class="airplane-box">
-            <p class="airplane-label">現在の受付状況</p>
-            <div class="seat-row">
-                <span class="seat-badge stop">販売停止</span>
-                <span class="seat-name">エコノミー（Value系）</span>
-                <span class="seat-note">全プラン停止中</span>
-            </div>
-            <div class="seat-row">
-                <span class="seat-badge open">受付中</span>
-                <span class="seat-name">ビジネス（Regular）</span>
-                <span class="seat-note">継続受付中</span>
-            </div>
-            <div class="seat-row">
-                <span class="seat-badge open">受付中</span>
-                <span class="seat-name">ファースト（Express以上）</span>
-                <span class="seat-note">継続受付中</span>
-            </div>
+        <div style="margin:1.2em 0 1.8em;overflow-x:auto;">
+        <svg width="100%" viewBox="0 0 680 200" role="img" xmlns="http://www.w3.org/2000/svg">
+          <title>PSAの現在の受付状況（飛行機の座席に例えた図）</title>
+          <desc>エコノミー停止・ビジネス受付中・ファースト受付中の3クラスを示した図</desc>
+          <text x="340" y="24" text-anchor="middle" font-size="12" fill="#888" font-family="'Noto Sans JP',sans-serif">現在の受付状況 ── PSAを飛行機の座席に例えると</text>
+          <rect x="20" y="44" width="196" height="132" rx="10" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1"/>
+          <rect x="20" y="44" width="196" height="44" rx="10" fill="#E24B4A"/>
+          <rect x="20" y="68" width="196" height="20" fill="#E24B4A"/>
+          <text x="118" y="72" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="700" fill="#fff" font-family="'Noto Sans JP',sans-serif">エコノミー</text>
+          <rect x="60" y="96" width="116" height="22" rx="11" fill="#fff"/>
+          <text x="118" y="107" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#E24B4A" font-family="'Noto Sans JP',sans-serif">販売停止中</text>
+          <text x="118" y="134" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#A32D2D" font-family="'Noto Sans JP',sans-serif">Value系 全プラン</text>
+          <text x="118" y="156" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#A32D2D" font-family="'Noto Sans JP',sans-serif">安価・大量提出向け</text>
+          <rect x="242" y="44" width="196" height="132" rx="10" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+          <rect x="242" y="44" width="196" height="44" rx="10" fill="#639922"/>
+          <rect x="242" y="68" width="196" height="20" fill="#639922"/>
+          <text x="340" y="72" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="700" fill="#fff" font-family="'Noto Sans JP',sans-serif">ビジネス</text>
+          <rect x="282" y="96" width="116" height="22" rx="11" fill="#fff"/>
+          <text x="340" y="107" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#3B6D11" font-family="'Noto Sans JP',sans-serif">受付中</text>
+          <text x="340" y="134" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#27500A" font-family="'Noto Sans JP',sans-serif">Regular</text>
+          <text x="340" y="156" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#27500A" font-family="'Noto Sans JP',sans-serif">継続して受付中</text>
+          <rect x="464" y="44" width="196" height="132" rx="10" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+          <rect x="464" y="44" width="196" height="44" rx="10" fill="#3B6D11"/>
+          <rect x="464" y="68" width="196" height="20" fill="#3B6D11"/>
+          <text x="562" y="72" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="700" fill="#fff" font-family="'Noto Sans JP',sans-serif">ファースト</text>
+          <rect x="502" y="96" width="120" height="22" rx="11" fill="#fff"/>
+          <text x="562" y="107" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#3B6D11" font-family="'Noto Sans JP',sans-serif">受付中</text>
+          <text x="562" y="134" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#173404" font-family="'Noto Sans JP',sans-serif">Express以上</text>
+          <text x="562" y="156" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#173404" font-family="'Noto Sans JP',sans-serif">継続して受付中</text>
+        </svg>
         </div>
 
         <p>重要なのは、座席が足りないわけではなく「空港の保安検査場がパンクしている状態」に近いという点です。だから航空会社としては「安いチケットの販売を止めて、高いチケットのお客様を優先する」という判断になります。PSAも同様の構造です。</p>
@@ -252,16 +265,29 @@
 
         <h2>2021年との比較——同じ危機ではない</h2>
 
-        <div class="history-box">
-            <p class="history-label">2021年 vs 2026年</p>
-            <div class="history-row">
-                <span class="history-year">2021年</span>
-                <span>コロナ禍＋ポケカブーム＋スポーツカードブームが重なり需要が爆発。設備不足のまま対応が追いつかず約1,000万枚でギブアップ宣言。低価格プランをほぼ全面停止。</span>
-            </div>
-            <div class="history-row">
-                <span class="history-year">2026年</span>
-                <span>5年間の設備投資・人員増強・自動化を経た後でも1,400万枚のバックログ。ただし今回は「パンク寸前で先手を打った」可能性が高い。</span>
-            </div>
+        <div style="margin:1.2em 0 1.8em;overflow-x:auto;">
+        <svg width="100%" viewBox="0 0 680 190" role="img" xmlns="http://www.w3.org/2000/svg">
+          <title>2021年 vs 2026年 PSA比較</title>
+          <desc>2021年と2026年のPSA危機の違いを対比したカード図</desc>
+          <text x="340" y="24" text-anchor="middle" font-size="12" fill="#888" font-family="'Noto Sans JP',sans-serif">同じ危機ではない ── 2021年と2026年の違い</text>
+          <rect x="20" y="40" width="300" height="136" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+          <rect x="20" y="40" width="300" height="40" rx="10" fill="#BA7517"/>
+          <rect x="20" y="64" width="300" height="16" fill="#BA7517"/>
+          <text x="170" y="64" text-anchor="middle" dominant-baseline="central" font-size="15" font-weight="700" fill="#fff" font-family="'Noto Sans JP',sans-serif">2021年</text>
+          <text x="170" y="100" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#412402" font-family="'Noto Sans JP',sans-serif">バックログ 約1,000万枚でギブアップ</text>
+          <text x="170" y="120" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#854F0B" font-family="'Noto Sans JP',sans-serif">コロナ禍＋ポケカ＋スポーツカードブームが重複</text>
+          <text x="170" y="138" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#854F0B" font-family="'Noto Sans JP',sans-serif">設備不足のまま対応できず全面パンク</text>
+          <text x="170" y="158" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#854F0B" font-family="'Noto Sans JP',sans-serif">「気づいたら大渋滞」状態</text>
+          <text x="340" y="115" text-anchor="middle" dominant-baseline="central" font-size="18" font-weight="700" fill="#ccc" font-family="'Noto Sans JP',sans-serif">VS</text>
+          <rect x="360" y="40" width="300" height="136" rx="10" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+          <rect x="360" y="40" width="300" height="40" rx="10" fill="#D85A30"/>
+          <rect x="360" y="64" width="300" height="16" fill="#D85A30"/>
+          <text x="510" y="64" text-anchor="middle" dominant-baseline="central" font-size="15" font-weight="700" fill="#fff" font-family="'Noto Sans JP',sans-serif">2026年</text>
+          <text x="510" y="100" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#4A1B0C" font-family="'Noto Sans JP',sans-serif">バックログ 1,400万枚・先手で入口を絞る</text>
+          <text x="510" y="120" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#993C1D" font-family="'Noto Sans JP',sans-serif">5年間の設備投資・人員増強を経た後でも超過</text>
+          <text x="510" y="138" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#993C1D" font-family="'Noto Sans JP',sans-serif">バックログを数字で公開・目標値を明示</text>
+          <text x="510" y="158" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#993C1D" font-family="'Noto Sans JP',sans-serif">「渋滞になりそうだから先に絞った」状態</text>
+        </svg>
         </div>
 
         <p>単純に枚数だけ見ると2026年の方が深刻に見えますが、重要なのは絶対数ではなく処理能力との比較です。PSAが「5〜6ヶ月で900万枚減らす」という予測を出しているなら、単純計算で月150〜180万枚ペースの純減を想定していることになります。もしこれが現実的な数字なら、2021年当時とは比較にならない処理能力を持っていることになります。</p>
@@ -272,19 +298,36 @@
         </div>
 
         <h2>今後のシナリオ</h2>
-        <div class="scenario-grid">
-            <div class="scenario-card a">
-                <p class="scenario-label a">シナリオA（理想）</p>
-                <p class="scenario-body">バックログが順調に減少し、年末頃に500万枚到達。Value再開。料金は据え置きか小幅値上げ。</p>
-            </div>
-            <div class="scenario-card b">
-                <p class="scenario-label b">シナリオB（現実的）</p>
-                <p class="scenario-body">バックログは減るが想定より遅い。Regularを値上げして需要を調整。Value再開は2027年以降にずれ込む。</p>
-            </div>
-            <div class="scenario-card c">
-                <p class="scenario-label c">シナリオC（最悪）</p>
-                <p class="scenario-body">バックログが横ばいまたは増加。Regular値上げに加え提出数制限も導入。Value長期停止が確定的に。</p>
-            </div>
+        <div style="margin:1.2em 0 1.8em;overflow-x:auto;">
+        <svg width="100%" viewBox="0 0 680 190" role="img" xmlns="http://www.w3.org/2000/svg">
+          <title>PSA今後の3つのシナリオ</title>
+          <desc>シナリオA・B・Cを横並びで示したカード図</desc>
+          <text x="340" y="24" text-anchor="middle" font-size="12" fill="#888" font-family="'Noto Sans JP',sans-serif">今後のシナリオ ── 次のバックログ更新が最初の分岐点</text>
+          <rect x="20" y="40" width="196" height="136" rx="10" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+          <rect x="20" y="40" width="196" height="40" rx="10" fill="#639922"/>
+          <rect x="20" y="64" width="196" height="16" fill="#639922"/>
+          <text x="118" y="64" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="700" fill="#fff" font-family="'Noto Sans JP',sans-serif">シナリオ A（理想）</text>
+          <text x="118" y="96" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#173404" font-family="'Noto Sans JP',sans-serif">年末頃Value再開</text>
+          <text x="118" y="116" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#3B6D11" font-family="'Noto Sans JP',sans-serif">バックログが順調に減少し</text>
+          <text x="118" y="134" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#3B6D11" font-family="'Noto Sans JP',sans-serif">500万枚到達・料金据え置きか</text>
+          <text x="118" y="152" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#3B6D11" font-family="'Noto Sans JP',sans-serif">小幅値上げで再開</text>
+          <rect x="242" y="40" width="196" height="136" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+          <rect x="242" y="40" width="196" height="40" rx="10" fill="#BA7517"/>
+          <rect x="242" y="64" width="196" height="16" fill="#BA7517"/>
+          <text x="340" y="64" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="700" fill="#fff" font-family="'Noto Sans JP',sans-serif">シナリオ B（現実的）</text>
+          <text x="340" y="96" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#412402" font-family="'Noto Sans JP',sans-serif">Regular値上げ・2027年以降</text>
+          <text x="340" y="116" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#854F0B" font-family="'Noto Sans JP',sans-serif">減少ペースが想定より遅く</text>
+          <text x="340" y="134" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#854F0B" font-family="'Noto Sans JP',sans-serif">Regularを値上げして需要調整</text>
+          <text x="340" y="152" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#854F0B" font-family="'Noto Sans JP',sans-serif">Value再開は2027年以降にずれ込む</text>
+          <rect x="464" y="40" width="196" height="136" rx="10" fill="#FCEBEB" stroke="#A32D2D" stroke-width="0.5"/>
+          <rect x="464" y="40" width="196" height="40" rx="10" fill="#E24B4A"/>
+          <rect x="464" y="64" width="196" height="16" fill="#E24B4A"/>
+          <text x="562" y="64" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="700" fill="#fff" font-family="'Noto Sans JP',sans-serif">シナリオ C（最悪）</text>
+          <text x="562" y="96" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#501313" font-family="'Noto Sans JP',sans-serif">Value長期停止が確定的に</text>
+          <text x="562" y="116" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#A32D2D" font-family="'Noto Sans JP',sans-serif">バックログが横ばいまたは増加</text>
+          <text x="562" y="134" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#A32D2D" font-family="'Noto Sans JP',sans-serif">Regular値上げ＋提出数制限も</text>
+          <text x="562" y="152" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#A32D2D" font-family="'Noto Sans JP',sans-serif">Value長期停止が確定的に</text>
+        </svg>
         </div>
 
         <p>個人的にはAとBの中間あたりが現実的だと思います。PSAがバックログを公開した以上、「全然減りませんでした」は経営的にも格好がつかない。ある程度は減らせる自信があるからこそ公開したはずです。ただし、次回以降のトラッカー更新で減少ペースが想定を下回るようなら、シナリオBへの移行は十分あり得ます。</p>
@@ -316,7 +359,7 @@
     <div class="footer-inner">
         <div class="footer-logo">
             <p class="footer-logo-name">Grading Pulse <span style="color:#e94560;">ぐれぱる！</span></p>
-            <p class="footer-logo-sub">eBayのPSA鑑定ポケカをまとめて見やすく。</p>
+            <p class="footer-logo-sub">ポケカ＆トレカ市場を、もっと深く。</p>
         </div>
         <nav class="footer-links" aria-label="フッターナビゲーション">
             <a href="../privacy.html">プライバシーポリシー・免責事項</a>
