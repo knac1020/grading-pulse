@@ -22,8 +22,9 @@
       gtag('config', 'G-SD0DS71QS3');
     </script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: #f8f8f8; color: #1c1c1e; }
+        body { font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif; background: #f8f8f8; color: #1c1c1e; }
         header { background: #fff; border-bottom: 1px solid #e0e0e0; position: sticky; top: 0; z-index: 100; }
         .header-inner { max-width: 1400px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; height: 56px; gap: 16px; }
         .logo-wrap { display: flex; flex-direction: column; flex: 1; text-decoration: none; }
@@ -98,7 +99,7 @@
     <div class="header-inner">
         <a class="logo-wrap" href="../index.html" aria-label="Grading Pulse トップページへ">
             <img src="../logo.png" alt="Grading Pulse（ぐれぱる）" style="height:40px;width:auto;max-width:180px;object-fit:contain;">
-            <span class="logo-sub">eBay PSAポケカ出品まとめ</span>
+            <span class="logo-sub">ポケカ＆トレカ市場を、もっと深く。</span>
         </a>
         <div class="header-search" role="search">
             <input type="search" placeholder="カード名で検索" aria-label="カードを検索" onkeypress="if(event.key==='Enter'){location.href='../list.html?q='+encodeURIComponent(this.value);}">
@@ -145,25 +146,35 @@
                 <h2>ポケカはどのHSコードに分類される？</h2>
                 <p>ポケモンカードは税関上、主に以下の2つの分類周辺で扱われます。</p>
 
-                <table class="rank-table">
-                    <thead>
-                        <tr><th>HSコード</th><th>内容</th><th>基本税率</th><th>WTO税率</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>9504.40</strong></td>
-                            <td>トランプ類・カードゲーム類</td>
-                            <td class="tax-rate">3.8%</td>
-                            <td class="tax-rate">3.2%</td>
-                        </tr>
-                        <tr>
-                            <td><strong>9504.90</strong></td>
-                            <td>その他の遊戯用具（その他のもの）</td>
-                            <td class="tax-zero">無税</td>
-                            <td class="tax-zero">無税</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div style="margin:1.2em 0 1.8em;overflow-x:auto;">
+                <svg width="100%" viewBox="0 0 680 210" role="img" xmlns="http://www.w3.org/2000/svg">
+                  <title>ポケカのHSコード分類比較</title>
+                  <desc>9504.40と9504.90の違いを比較したカード図</desc>
+                  <text x="340" y="24" text-anchor="middle" font-size="12" fill="#888" font-family="'Noto Sans JP',sans-serif">ポケカが分類される可能性のある2つのHSコード</text>
+                  <rect x="20" y="40" width="300" height="152" rx="10" fill="#FCEBEB" stroke="#A32D2D" stroke-width="0.5"/>
+                  <rect x="20" y="40" width="300" height="44" rx="10" fill="#E24B4A"/>
+                  <rect x="20" y="64" width="300" height="20" fill="#E24B4A"/>
+                  <text x="170" y="68" text-anchor="middle" dominant-baseline="central" font-size="15" font-weight="700" fill="#fff" font-family="'Noto Sans JP',sans-serif">9504.40</text>
+                  <text x="170" y="100" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#501313" font-family="'Noto Sans JP',sans-serif">トランプ類・カードゲーム類</text>
+                  <line x1="40" y1="118" x2="300" y2="118" stroke="#F7C1C1" stroke-width="0.5"/>
+                  <text x="170" y="132" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#A32D2D" font-family="'Noto Sans JP',sans-serif">基本税率</text>
+                  <text x="170" y="146" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#A32D2D" font-family="'Noto Sans JP',sans-serif">3.8%</text>
+                  <line x1="40" y1="158" x2="300" y2="158" stroke="#F7C1C1" stroke-width="0.5"/>
+                  <text x="170" y="168" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#A32D2D" font-family="'Noto Sans JP',sans-serif">WTO協定税率</text>
+                  <text x="170" y="181" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#A32D2D" font-family="'Noto Sans JP',sans-serif">3.2%</text>
+                  <rect x="360" y="40" width="300" height="152" rx="10" fill="#EAF3DE" stroke="#3B6D11" stroke-width="1"/>
+                  <rect x="360" y="40" width="300" height="44" rx="10" fill="#3B6D11"/>
+                  <rect x="360" y="64" width="300" height="20" fill="#3B6D11"/>
+                  <text x="510" y="68" text-anchor="middle" dominant-baseline="central" font-size="15" font-weight="700" fill="#fff" font-family="'Noto Sans JP',sans-serif">9504.90</text>
+                  <text x="510" y="100" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#173404" font-family="'Noto Sans JP',sans-serif">その他の遊戯用具（その他）</text>
+                  <line x1="380" y1="118" x2="640" y2="118" stroke="#C0DD97" stroke-width="0.5"/>
+                  <text x="510" y="132" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#3B6D11" font-family="'Noto Sans JP',sans-serif">基本税率</text>
+                  <text x="510" y="146" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#3B6D11" font-family="'Noto Sans JP',sans-serif">無税</text>
+                  <line x1="380" y1="158" x2="640" y2="158" stroke="#C0DD97" stroke-width="0.5"/>
+                  <text x="510" y="168" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#3B6D11" font-family="'Noto Sans JP',sans-serif">WTO協定税率</text>
+                  <text x="510" y="181" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#3B6D11" font-family="'Noto Sans JP',sans-serif">無税</text>
+                </svg>
+                </div>
 
                 <div class="warn-box">
                     <p class="warn-title">⚠️ 重要：9504.40と9504.90は別の分類</p>
@@ -202,6 +213,32 @@
             <section id="shouhizei">
                 <h2>関税ゼロでも消費税はかかる</h2>
                 <p>関税が無税になっても、輸入消費税（10%）と地方消費税は別途かかります。高額カードになるほどこの金額は大きくなります。「関税ゼロ＝税金ゼロ」ではない点は必ず覚えておいてください。</p>
+
+                <div style="margin:1.2em 0 1.8em;overflow-x:auto;">
+                <svg width="100%" viewBox="0 0 680 180" role="img" xmlns="http://www.w3.org/2000/svg">
+                  <title>関税ゼロでも消費税はかかる</title>
+                  <desc>関税・輸入消費税・地方消費税の3つの税を示した図</desc>
+                  <text x="340" y="22" text-anchor="middle" font-size="12" fill="#888" font-family="'Noto Sans JP',sans-serif">「関税ゼロ＝税金ゼロ」ではない ── 実際にかかる費用の内訳</text>
+                  <rect x="20" y="44" width="196" height="112" rx="10" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+                  <rect x="20" y="44" width="196" height="40" rx="10" fill="#3B6D11"/>
+                  <rect x="20" y="64" width="196" height="20" fill="#3B6D11"/>
+                  <text x="118" y="68" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="700" fill="#fff" font-family="'Noto Sans JP',sans-serif">関税</text>
+                  <text x="118" y="104" text-anchor="middle" dominant-baseline="central" font-size="22" font-weight="700" fill="#3B6D11" font-family="'Noto Sans JP',sans-serif">0%</text>
+                  <text x="118" y="136" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#27500A" font-family="'Noto Sans JP',sans-serif">9504.90分類の場合は無税</text>
+                  <rect x="242" y="44" width="196" height="112" rx="10" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+                  <rect x="242" y="44" width="196" height="40" rx="10" fill="#D85A30"/>
+                  <rect x="242" y="64" width="196" height="20" fill="#D85A30"/>
+                  <text x="340" y="68" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="700" fill="#fff" font-family="'Noto Sans JP',sans-serif">輸入消費税</text>
+                  <text x="340" y="104" text-anchor="middle" dominant-baseline="central" font-size="22" font-weight="700" fill="#D85A30" font-family="'Noto Sans JP',sans-serif">7.8%</text>
+                  <text x="340" y="136" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#993C1D" font-family="'Noto Sans JP',sans-serif">課税価格に対して発生</text>
+                  <rect x="464" y="44" width="196" height="112" rx="10" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+                  <rect x="464" y="44" width="196" height="40" rx="10" fill="#993C1D"/>
+                  <rect x="464" y="64" width="196" height="20" fill="#993C1D"/>
+                  <text x="562" y="68" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="700" fill="#fff" font-family="'Noto Sans JP',sans-serif">地方消費税</text>
+                  <text x="562" y="104" text-anchor="middle" dominant-baseline="central" font-size="22" font-weight="700" fill="#993C1D" font-family="'Noto Sans JP',sans-serif">2.2%</text>
+                  <text x="562" y="136" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#791F1F" font-family="'Noto Sans JP',sans-serif">合計で消費税10%相当</text>
+                </svg>
+                </div>
                 <p>実際にeBayでポケカを輸入した際に請求されるのは、ほぼこの輸入消費税です。詳しくは<a href="article02.html">こちらの関税・消費税の解説記事</a>もご覧ください。</p>
             </section>
 
@@ -233,7 +270,7 @@
     <div class="footer-inner">
         <div class="footer-logo">
             <p class="footer-logo-name">Grading Pulse <span style="color:#e94560;">ぐれぱる！</span></p>
-            <p class="footer-logo-sub">eBayのPSA鑑定ポケカをまとめて見やすく。</p>
+            <p class="footer-logo-sub">ポケカ＆トレカ市場を、もっと深く。</p>
         </div>
         <nav class="footer-links" aria-label="フッターナビゲーション">
             <a href="../privacy.html">プライバシーポリシー・免責事項</a>
