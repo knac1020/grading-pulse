@@ -135,6 +135,48 @@
     <button class="lang-tab" id="lang-bar-en" onclick="switchLang('english', this)">🇺🇸 他言語カード</button>
 </nav>
 
+<!-- 特集記事バナー -->
+<section style="max-width:1400px;margin:0 auto;padding:48px 20px 0;">
+    <a href="articles/article21.html" style="display:block; text-decoration:none; background: #e8e8e8; border-radius: 12px; overflow: hidden; position: relative;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.06;">
+            <div style="position: absolute; top: -40px; right: -40px; width: 280px; height: 280px; border-radius: 50%; border: 40px solid #e94560;"></div>
+            <div style="position: absolute; bottom: -60px; left: 20%; width: 200px; height: 200px; border-radius: 50%; border: 30px solid #e94560;"></div>
+        </div>
+        <div style="position: relative; padding: 36px 40px;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+                <span style="background: #e94560; color: #fff; font-size: 10px; font-weight: 700; letter-spacing: 2px; padding: 4px 10px; border-radius: 4px;">SPECIAL FEATURE</span>
+                <span style="color: #888; font-size: 11px; letter-spacing: 1px;">PSA・鑑定市場</span>
+            </div>
+            <h2 style="font-size: clamp(16px, 2.4vw, 22px); font-weight: 700; color: #1c1c1e; line-height: 1.45; margin: 0 0 14px; font-family: 'Noto Sans JP', sans-serif;">
+                PSA 2025 Fraud Report を読み解く<br>
+                <span style="color: #e94560;">偽造ポケカ +125%・改ざん +407%</span> の衝撃
+            </h2>
+            <p style="font-size: 13px; color: #555; line-height: 1.8; margin: 0 0 24px; font-family: 'Noto Sans JP', sans-serif;">
+                PSAが摘発した偽造品の推定市場価値は <strong style="color:#1c1c1e;">2億ドル超</strong>。なぜポケカが改ざんされやすいのか、eBayで騙されないためにすべき7つのチェックを完全解説。
+            </p>
+            <div style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
+                <div style="display: flex; gap: 16px;">
+                    <div style="text-align: center;">
+                        <p style="font-size: 22px; font-weight: 700; color: #e94560; margin: 0;">+125%</p>
+                        <p style="font-size: 10px; color: #888; margin: 2px 0 0;">偽造増加率</p>
+                    </div>
+                    <div style="width: 1px; background: #ccc; align-self: stretch;"></div>
+                    <div style="text-align: center;">
+                        <p style="font-size: 22px; font-weight: 700; color: #D85A30; margin: 0;">+407%</p>
+                        <p style="font-size: 10px; color: #888; margin: 2px 0 0;">改ざん増加率</p>
+                    </div>
+                    <div style="width: 1px; background: #ccc; align-self: stretch;"></div>
+                    <div style="text-align: center;">
+                        <p style="font-size: 22px; font-weight: 700; color: #1c1c1e; margin: 0;">$200M+</p>
+                        <p style="font-size: 10px; color: #888; margin: 2px 0 0;">摘発総額</p>
+                    </div>
+                </div>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: #e94560; color: #fff; font-size: 12px; font-weight: 700; padding: 10px 20px; border-radius: 25px; margin-left: auto;">記事を読む →</span>
+            </div>
+        </div>
+    </a>
+</section>
+
 <!-- コラム＆ガイド -->
 <section style="max-width:1400px;margin:0 auto;padding:48px 20px 40px;" aria-labelledby="article-section-title">
     <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:24px;">
@@ -223,7 +265,6 @@
 <script>
     // ★新記事追加時はここの先頭に1行追加するだけでOK（新しい順）
     var articles = [
-        { url: 'articles/article21.html', category: 'PSA・鑑定市場', title: 'PSA 2025 Fraud Reportを読み解く｜偽造ポケカ+125%・改ざん+407%の衝撃と、eBayで騙されないための完全ガイド', date: '2026.06' },
         { url: 'articles/article20.html', category: 'ポケモンカード知識', title: 'ポケカ界隈にも潜む「パンプ&ダンプ」——SNSの煽り情報に騙されないために', date: '2026.06' },
         { url: 'articles/article18.html', category: 'ポケモンカード知識', title: 'ポケカを株と同じように考えるのは本当に危険　「収集品市場」として正しく理解するために', date: '2026.06' },
         { url: 'articles/article17.html', category: 'PSA・鑑定市場', title: 'PSAの次の一手はレギュラー以上の値上げか停止か｜2021年との比較と今後のシナリオを考察', date: '2026.06' },
@@ -232,6 +273,7 @@
         { url: 'articles/article06.html', category: '関税・輸入', title: 'ポケカの関税は絶対0％なの？HSコードと税率の仕組みを解説', date: '2026.05' },
         { url: 'articles/article03.html', category: 'eBay基礎知識', title: 'eBayの決済方法まとめ｜クレカとPayPalどっちがいい？', date: '2026.05' },
         { url: 'articles/article02.html', category: 'eBay基礎知識', title: 'eBayで関税はかかるの？輸入消費税との違いを初心者向けに解説', date: '2026.05' },
+        { url: 'articles/article21.html', category: 'PSA・鑑定市場', title: 'PSA 2025 Fraud Reportを読み解く｜偽造ポケカ+125%・改ざん+407%の衝撃と、eBayで騙されないための完全ガイド', date: '2026.06' },
         { url: 'articles/article19.html', category: '店舗レポート', title: '「アビスアイ」発売後、東京都内で買えた店・買えなかった店を実体験ベースで紹介', date: '2026.06' },
         { url: 'articles/article14.html', category: '市場考察', title: 'ブラッキー×30周年の鉄板セットが発売　「30th CELEBRATIONプレミアムデッキセット エーフィ・ブラッキー」はどれほどまでに高騰するのか？', date: '2026.06' },
         { url: 'articles/article13.html', category: 'eBay基礎知識', title: 'eBay支払い方法の設定手順【スマホ・ブラウザ版】', date: '2026.06' },
