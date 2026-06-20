@@ -154,57 +154,40 @@
             <p style="font-size: 13px; color: #444; line-height: 1.8; margin: 0 0 24px; font-family: 'Noto Sans JP', sans-serif;">
                 PSAが摘発した偽造品の推定市場価値は <strong style="color:#1c1c1e;">2億ドル超</strong>。なぜポケカが改ざんされやすいのか、eBayで騙されないためにすべき7つのチェックを完全解説。
             </p>
-            <!-- PC用レイアウト -->
-            <div class="banner-pc" style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
-                <div style="display: flex; gap: 16px;">
-                    <div style="text-align: center;">
-                        <p style="font-size: 22px; font-weight: 700; color: #e94560; margin: 0;">+125%</p>
-                        <p style="font-size: 10px; color: #666; margin: 2px 0 0;">偽造増加率</p>
-                    </div>
-                    <div style="width: 1px; background: #bbb; align-self: stretch;"></div>
-                    <div style="text-align: center;">
-                        <p style="font-size: 22px; font-weight: 700; color: #D85A30; margin: 0;">+407%</p>
-                        <p style="font-size: 10px; color: #666; margin: 2px 0 0;">改ざん増加率</p>
-                    </div>
-                    <div style="width: 1px; background: #bbb; align-self: stretch;"></div>
-                    <div style="text-align: center;">
-                        <p style="font-size: 22px; font-weight: 700; color: #1c1c1e; margin: 0;">$200M+</p>
-                        <p style="font-size: 10px; color: #666; margin: 2px 0 0;">摘発総額</p>
-                    </div>
-                </div>
-                <span style="display: inline-flex; align-items: center; gap: 6px; background: #e94560; color: #fff; font-size: 12px; font-weight: 700; padding: 10px 20px; border-radius: 25px; margin-left: auto;">記事を読む →</span>
-            </div>
-            <!-- スマホ用レイアウト -->
-            <div class="banner-sp" style="display: none;">
-                <div style="display: flex; gap: 16px; margin-bottom: 20px;">
-                    <div style="text-align: center;">
-                        <p style="font-size: 22px; font-weight: 700; color: #e94560; margin: 0;">+125%</p>
-                        <p style="font-size: 10px; color: #666; margin: 2px 0 0;">偽造増加率</p>
-                    </div>
-                    <div style="width: 1px; background: #bbb; align-self: stretch;"></div>
-                    <div style="text-align: center;">
-                        <p style="font-size: 22px; font-weight: 700; color: #D85A30; margin: 0;">+407%</p>
-                        <p style="font-size: 10px; color: #666; margin: 2px 0 0;">改ざん増加率</p>
-                    </div>
-                    <div style="width: 1px; background: #bbb; align-self: stretch;"></div>
-                    <div style="text-align: center;">
-                        <p style="font-size: 22px; font-weight: 700; color: #1c1c1e; margin: 0;">$200M+</p>
-                        <p style="font-size: 10px; color: #666; margin: 2px 0 0;">摘発総額</p>
-                    </div>
-                </div>
+            <div id="banner-numbers" style="display: flex; gap: 16px; margin-bottom: 20px;">
                 <div style="text-align: center;">
-                    <span style="display: inline-flex; align-items: center; gap: 6px; background: #e94560; color: #fff; font-size: 13px; font-weight: 700; padding: 12px 32px; border-radius: 25px;">記事を読む →</span>
+                    <p style="font-size: 22px; font-weight: 700; color: #e94560; margin: 0;">+125%</p>
+                    <p style="font-size: 10px; color: #666; margin: 2px 0 0;">偽造増加率</p>
                 </div>
+                <div style="width: 1px; background: #bbb; align-self: stretch;"></div>
+                <div style="text-align: center;">
+                    <p style="font-size: 22px; font-weight: 700; color: #D85A30; margin: 0;">+407%</p>
+                    <p style="font-size: 10px; color: #666; margin: 2px 0 0;">改ざん増加率</p>
+                </div>
+                <div style="width: 1px; background: #bbb; align-self: stretch;"></div>
+                <div style="text-align: center;">
+                    <p style="font-size: 22px; font-weight: 700; color: #1c1c1e; margin: 0;">$200M+</p>
+                    <p style="font-size: 10px; color: #666; margin: 2px 0 0;">摘発総額</p>
+                </div>
+                <span id="banner-btn-pc" style="display: inline-flex; align-items: center; gap: 6px; background: #e94560; color: #fff; font-size: 12px; font-weight: 700; padding: 10px 20px; border-radius: 25px; margin-left: auto;">記事を読む →</span>
+            </div>
+            <div id="banner-btn-sp" style="display: none; text-align: center;">
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: #e94560; color: #fff; font-size: 13px; font-weight: 700; padding: 12px 32px; border-radius: 25px;">記事を読む →</span>
             </div>
         </div>
     </a>
 </section>
-<style>
-@media (max-width: 768px) {
-    .banner-pc { display: none !important; }
-    .banner-sp { display: block !important; }
-}
-</style>
+<script>
+(function() {
+    function adjustBanner() {
+        var isSP = window.innerWidth <= 768;
+        document.getElementById('banner-btn-pc').style.display = isSP ? 'none' : 'inline-flex';
+        document.getElementById('banner-btn-sp').style.display = isSP ? 'block' : 'none';
+    }
+    adjustBanner();
+    window.addEventListener('resize', adjustBanner);
+})();
+</script>
 
 <!-- コラム＆ガイド -->
 <section style="max-width:1400px;margin:0 auto;padding:48px 20px 40px;" aria-labelledby="article-section-title">
